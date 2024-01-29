@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문서 작성하기</title>
+    <style>
+        .container{
+            width: 600px;
+            margin: 0 auto; /* 가운데 정렬 */
+        }
+        fieldset{
+            margin: 15px 10px; /* 상하 마진 15px, 좌우 마진 10px */
+        }
+        legend{ /* 필드셋의 제목 */
+            font-weight: bold; /* 굵은 글자 */
+            font-size: 20px; /* 글자 크기 */
+            color: green; /* 글자 색 */
+        }
+        ul{ /* 순서없는 목록에 적용할 스타일 */
+            list-style: none; /* 불릿 없앰 */
+            /* border: 1px solid salmon; */
+        }
+        li{ /* 목록의 각 항목 */
+            margin-bottom: 10px;
+            /* border: 1px solid salmon; */
+        }
+        .title{ /* class=title에 적용할 스타일 */
+            font-weight: bold; /* 굵은 글자 */
+            width: 100px; /* 너비 100px */
+            float: left; /* 왼쪽으로 배치 */
+            /* color: red; */
+        }
+        .centerd{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <h1>상품 주문서</h1>
+    <form>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>
+                    <label for="uname" class="title">이름</label>
+                    <input type="text" id="uname" placeholder="여백없이 입력" required>
+                    <!-- required : 필수 입력 -->
+                </li>
+                <li>
+                    <label for="tel1" class="title">연락처</label>
+                    <input type="tel" id="tel1" placeholder="연락가능한 번호">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>배송지 정보</legend>
+            <ul>
+                <li>
+                    <label for="addr" class="title">주소</label>
+                    <input type="text" size="40" id="addr" required>
+                </li>
+                <li>
+                    <label for="tel2" class="title">전화번호</label>
+                    <input type="tel" id="tel2" required>
+                </li>
+                <li>
+                    <label for="comment" class="title">메 모</label>
+                    <textarea id="comment" cols="40" rows="3"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>주문 정보</legend>
+            <ul>
+                <li>
+                    <input type="checkbox" id="order1" checked>
+                    <label for="order1">과테말라 안티구아 (100g)</label>
+                    <input type="text" id="order1" value="0" size="5px">개
+                </li>
+                <li>
+                    <input type="checkbox" id="order2">
+                    <label for="order2">인도네시아 만델링 (100g)</label>
+                    <input type="text" id="order2" value="0" size="5px">개
+                </li>
+                <li>
+                    <input type="checkbox" id="order3">
+                    <label for="order3">탐라는도다(블렌딩) (100g)</label>
+                    <input type="text" id="order3" value="0" size="5px">개
+                </li>
+            </ul>
+        </fieldset>
+
+        <div class="centerd">
+        <input type="submit" value="주문하기">
+        <input type="reset" value="다시작성">
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
