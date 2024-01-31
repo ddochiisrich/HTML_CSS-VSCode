@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>셀 합치기 연습</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        /* 표의 테두리를 한 줄로 표시 (붕괴하다) */
+      }
+      table,
+      th,
+      td {
+        border: 1px solid gray;
+      }
+      thead {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        <strong>Modern browser</strong>
+        <p>국내에서 자주 사용하는 모던 브라우저</p>
+      </caption>
+      <!-- 행 row(tr) 열 column(td) 제목셀(th) -->
+      <thead>
+        <tr>
+          <th>브라우저</th>
+          <th>제조업체</th>
+          <th>다운로드</th>
+        </tr>
+      </thead>
+      <tr>
+        <th>크롬(chrome)</th>
+        <td>google</td>
+        <td>
+          <a href="http://www.google.com/chrome/"
+            >http://www.google.com/chrome/
+          </a>
+        </td>
+        <!-- a : 하이퍼링크 -->
+      </tr>
+      <tr>
+        <th>파이어폭스(firefox)</th>
+        <td>Mozilla</td>
+        <td>
+          <a href="https://www.mozilla.org/ko/firefox/new/"
+            >https://www.mozilla.org/ko/firefox/new/</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <th>엣지(Edge)</th>
+        <td>Microsoft</td>
+        <td>
+          <a href="https://www.microsoft.com/ko-kr/edge/download?form=MA13FJ"
+            >https://www.microsoft.com/ko-kr/edge/download?form=MA13FJ</a
+          >
+        </td>
+      </tr>
+    </table>
+
+    <br /><br /><br /><br /><br />
+
+    <table>
+      <caption>
+        <b>요안도라 객실</b>
+      </caption>
+      <thead>
+        <tr>
+          <th>방 이름</th>
+          <th>대상</th>
+          <th>크기</th>
+          <th>가격</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th>유채방</th>
+          <td>여성 도미토리</td>
+          <td rowspan="3">4인실</td>
+          <td rowspan="4">1인 20,000원</td>
+        </tr>
+
+        <tr>
+          <th rowspan="2">동백방</th>
+          <td>동성 도미토리</td>
+        </tr>
+
+        <tr>
+          <td>가족 1팀</td>
+        </tr>
+
+        <tr>
+          <th>천혜향방</th>
+          <td>-</td>
+          <td>2인실</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th colspan="4" style="background-color: lightgray;">바깥채 전체를 렌트합니다</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
