@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVER</title>
+    <style>
+        body{
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .firstline{
+            display: flex;
+            margin: 10px;
+
+        }
+        .left{
+            display: flex;
+            margin: 10px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid red; */
+
+        }
+        .right{
+            display: flex;
+            margin: 10px;
+            position: absolute;
+            margin-left: 915px;
+            justify-content: center;
+            align-items: center;       
+        
+            height: 40px;
+            /* border: 1px solid red; */
+        }
+        .asideimg{
+            margin-right: 10px;
+        }
+        .payarea{
+            margin: 0 10px;
+        }
+
+        .bellimg{
+            margin-left: 10px;
+        }
+        .chatarea{
+            margin: 0 10px;
+        }
+
+        .searcharea{
+            width: 1000px;
+            display:flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .searchbar{
+            width: 750px;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 20px;
+
+        }
+
+        .search{
+            border-style: none;
+            margin: 0px 10px;
+            font-size: 20px;
+        }
+        .search:focus{
+            outline: none;
+        }
+
+
+
+        .navbar{
+            display: flex;
+            margin: 30px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        nav{
+            margin: 10px;
+        }
+        .nav1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="firstline">
+    <div class="left">
+        <div class="asidarea">
+            <img class="asideimg" src="./menu.png" alt="" width="26px" >
+        </div>
+        <div class="payarea">
+            <img class="payareaimg" src="./pay.png" alt="" width="26px">
+        </div>
+    </div>
+    <div class="right">
+        <div class="chatarea">
+            <img class="charareaimg" src="./chat.png" alt="" width="26px">
+        </div>
+        <div class="bellarea">
+            <img class="bellareaimg" src="./bell.png" alt="" width="26px">
+        </div>
+    </div>
+</div>
+
+    <div class="searcharea">
+        <div class="searchbar">
+            <a href="#"><img src="./logo.png" alt="" width="24px"></a>
+            <input class="search" type="text" style="width: 650px; height: 20px;" placeholder="검색어를 입력해주세요." autofocus>
+            <a href="#"><img src="./search.png" alt="" width="24px"></a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <nav class="nav1"><img src="./nav_mail.png" width="24px">메일</nav>
+        <nav class="nav2"><img src="./nav_cafe.png" alt="">카페</nav>
+        <nav>블로그</nav>
+        <nav>쇼핑</nav>
+        <nav>뉴스</nav>
+        <nav>증권</nav>
+        <nav>부동산</nav>
+        <nav>지도</nav>
+        <nav>웹툰</nav>       
+    </div>
+
+
+</body>
+</html>

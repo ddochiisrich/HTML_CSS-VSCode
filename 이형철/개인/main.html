@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVER</title>
+    <style>
+        body{
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+        .firstline{
+            display: flex;
+            margin: 10px;
+
+        }
+        .left{
+            display: flex;
+            margin: 10px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid red; */
+
+        }
+        .right{
+            display: flex;
+            margin: 10px;
+            position: absolute;
+            margin-left: 1200px;
+            justify-content: center;
+            align-items: center;       
+        
+            height: 40px;
+            /* border: 1px solid red; */
+        }
+        .asideimg{
+            margin-right: 10px;
+        }
+        .payarea{
+            margin: 0 10px;
+        }
+
+        .bellimg{
+            margin-left: 10px;
+        }
+        .chatarea{
+            margin: 0 10px;
+        }
+
+        .searcharea{
+            width: 1280px;
+            display:flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .searchbar{
+            width: 750px;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 20px;
+
+        }
+
+        .search{
+            border-style: none;
+            margin: 0px 10px;
+            font-size: 20px;
+        }
+        .search:focus{
+            outline: none;
+        }
+
+        .navbar{
+            display: flex;
+            margin: 30px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbar a:link{
+            color: black;
+            text-decoration: none;
+        }
+        .navbar a:visited{
+            color: black;
+            text-decoration: none;
+        }
+        nav{
+            margin: 15px;
+        }
+        .nav1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav4{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav5{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav6{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav7{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav8{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav9{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .banner{
+            width: 1280px;
+            display: flex;
+            justify-content: center;
+        }
+        .news-stand-header{
+            width: 830px;
+            height: 426px;
+            border: 1px solid black;
+            border-radius: 8px;
+            margin-left: 20px;
+        }
+        .news-stand-header-tab{
+            display: flex;
+            justify-content: space-between;
+            /* border: 2px solid brown */
+
+        }
+        .news-stand-header-tab-banner{
+            display: flex;
+            margin-right: 20px;
+            height: 19;
+            justify-content: end;
+            align-items: center;
+            /* border: 2px solid blue */
+        }
+        .news-banner{
+            width: 193px;
+            height: 19px;
+            /* border: 2px solid red */
+        }
+        .news-stand-header-tab-ul{
+            margin: 0;
+            padding-left: 0;
+            display: flex;
+            justify-content: start;
+            list-style: none;
+            /* border: 2px solid pink */
+        }
+        .news-stand-header-tab-ul li{
+            margin: 20px 10px 20px 20px;
+        }
+        .news-stand-header-tab-li2::before{
+            display: inline-block;
+            content: "";
+            width: 2px;
+            height: 10px;
+            background-color: rgb(240, 240, 240);
+            margin-right: 20px;
+        }
+        .news-stand-header-tab-li3::before{
+            display: inline-block;
+            content: "";
+            width: 2px;
+            height: 10px;
+            background-color: rgb(240, 240, 240);
+            margin-right: 20px;
+        }
+        .news-stand-header-tab-li4::before{
+            display: inline-block;
+            content: "";
+            width: 2px;
+            height: 10px;
+            background-color: rgb(240, 240, 240);
+            margin-right: 20px;
+        }
+        .news-stand-header-tab-ul a:link{
+            color: black;
+            text-decoration: none;
+        }
+        .news-stand-header-tab-ul a:visited{
+
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div class="firstline">
+    <div class="left">
+        <div class="asidarea">
+            <img class="asideimg" src="./images/menu.png" alt="" width="26px" >
+        </div>
+        <div class="payarea">
+            <img class="payareaimg" src="./images/pay.png" alt="" width="26px">
+        </div>
+    </div>
+    <div class="right">
+        <div class="chatarea">
+            <img class="charareaimg" src="./images/chat.png" alt="" width="26px">
+        </div>
+        <div class="bellarea">
+            <img class="bellareaimg" src="./images/bell.png" alt="" width="26px">
+        </div>
+    </div>
+</div>
+
+    <div class="searcharea">
+        <div class="searchbar">
+            <a href="#"><img src="./images/logo.png" alt="" width="24px"></a>
+            <input class="search" type="text" style="width: 650px; height: 20px;" placeholder="검색어를 입력해주세요." autofocus>
+            <a href="#"><img src="./images/search.png" alt="" width="24px"></a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="#"><nav class="nav1"><img src="./images/nav_mail.png" width="24px">메일</nav></a>
+        <a href="#"><nav class="nav2"><img src="./images/nav_cafe.png" width="24px">카페</nav></a>
+        <a href="#"><nav class="nav3"><img src="./images/nav_blog.png" width="24px">블로그</nav></a>
+        <a href="#"><nav class="nav4"><img src="./images/nav_shopping.png" width="24px">쇼핑</nav></a>
+        <a href="#"><nav class="nav5"><img src="./images/nav_news.png" width="24px">뉴스</nav></a>
+        <a href="#"><nav class="nav6"><img src="./images/nav_chart.png" width="24px">증권</nav></a>
+        <a href="#"><nav class="nav7"><img src="./images/nav_house.png" width="24px">부동산</nav></a>
+        <a href="#"><nav class="nav8"><img src="./images/nav_map.png" width="24px">지도</nav></a>
+        <a href="#"><nav class="nav9"><img src="./images/nav_webtoon.png" width="24px">웹툰</nav> </a>      
+    </div>
+
+    <div class="banner">
+        <a href="#"><img src="./images/banner.png" width="580px"></a>
+    </div>
+
+    <div class="news-stand">
+        <div class="news-stand-header">
+            <div class="news-stand-header-tab">
+                <ul class="news-stand-header-tab-ul">
+                    <li class="news-stand-header-tab-li1">
+                        <span>
+                            <a href="#">뉴스스탠드</a>
+                            <a href="#">언론사편집</a>
+                        </span>
+                    </li>
+                    <li class="news-stand-header-tab-li2"><a href="#">엔터</a></li>
+                    <li class="news-stand-header-tab-li3"><a href="#">스포츠</a></li>
+                    <li class="news-stand-header-tab-li4"><a href="#">경제</a></li>
+                </ul>
+                <div class="news-stand-header-tab-banner">
+                    <a href="#"><img class="news-banner" src="./images/news_banner.png" width="193px"></a>
+                </div>
+            </div>
+            <div class="news-content">
+                <div class="news-content-left">
+                    123123
+                </div>
+                <div class="news-content-center">
+        
+                </div>
+                <div class="news-content-rifgt">
+        
+                </div>
+            </div>
+        </div>
+        </div>
+            
+
+
+</body>
+</html>
