@@ -8,14 +8,12 @@
 
     /* 캘린더 위젯 */
 
-    .container{
-            width: 390px;
-            height: 190px;
+    .calender-container{
             border: 1px solid rgb(192, 192, 192);
             border-radius: 10px;
             padding: 20px 20px 0px 20px;
         }
-    header{
+    .callender-header{
             display: flex;
             height: 40px;
         }
@@ -31,7 +29,7 @@
             padding: 40px 10px 0px 10px;
             margin: 0px 0px 7px 0px;
         }
-    main{
+    .calender-main{
             display: flex;
         }
     .sec2{
@@ -57,13 +55,6 @@
     .mainmemo{
             width: 390px;
         }    
-    li{
-            width: 418px;
-            height: 40px;
-            list-style: none;
-            padding: 7px;
-            line-height: 40px;
-        }       
     .box1{
             background-color: rgb(0, 191, 109);
             border: 1px solid rgb(233, 233, 233);
@@ -71,6 +62,11 @@
             font-weight: bold;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
+            width: 418px;
+            height: 40px;
+            list-style: none;
+            padding: 7px;
+            line-height: 40px;
         }    
     .M:link{
             text-decoration: none;
@@ -81,17 +77,32 @@
         }
     .box2{
             border: 1px solid rgb(233, 233, 233);
+            width: 418px;
+            height: 40px;
+            list-style: none;
+            padding: 7px;
+            line-height: 40px;
         }
     .memostar{
             margin-right: 10px;
         }
     .box3{
-            border: 1px solid rgb(233, 233, 233)
+            border: 1px solid rgb(233, 233, 233);
+            width: 418px;
+            height: 40px;
+            list-style: none;
+            padding: 7px;
+            line-height: 40px;
         }
     .box4{
             border: 1px solid rgb(233, 233, 233);
             border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;            
+            border-bottom-right-radius: 10px;      
+            width: 418px;
+            height: 40px;
+            list-style: none;
+            padding: 7px;
+            line-height: 40px;      
         }
     .memowrite{
             border: 1px solid rgb(233, 233, 233);
@@ -102,7 +113,7 @@
             background-color: white;
             border-radius: 50%;
         }
-        ul{
+    .mainmemo-wrap{
         margin: 0;
         padding: 0;
     }
@@ -114,8 +125,8 @@
 
     <!-- 캘린더 위젯 -->
 
-    <div class="container">
-        <header>
+    <div class="calendar-container">
+        <header class="calendar-header">
             <div>
                 <a class="C" href="./calendar.html" target="_blank"><b>캘린더</b></a>
             </div>
@@ -125,7 +136,7 @@
             </div>
         </header>
 
-        <main>
+        <main class="calendar-main">
             <section class="sec1">
             <div class="date">
                 <a class="C" href="./calendar.html" target="_blank"><p class="month">1.30</p></a>
@@ -143,7 +154,7 @@
     <!-- 메모 위젯 -->
 
     <div class="mainmemo">
-        <ul>
+        <ul class="mainmemo-wrap">
             <li class="box1"><a class="M" href="memo.html" target="_blank">메모</a></li>
             <li class="box2"><img class="memostar" src="images/메모_별.png">당신의 기억을 기록합니다. 기억해야할...</li>
             <li class="box3"></li>
