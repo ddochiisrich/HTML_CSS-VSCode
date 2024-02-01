@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 가상요소 </title>
+    <style>
+        li{
+            margin: 5px;
+        }
+        .pa::before{
+            content: "주문폭주!!";
+            background-color: hotpink;
+            margin: 5px;
+            font-size: 12px;            
+        }
+        .pd::after{
+            content: "NEW!!";
+            background-color: red;
+            color: white;
+            margin: 5px;
+            font-size: 12px;
+        }
+        .pf::before{
+            content: "주문폭주!!";
+            background-color: hotpink;
+            margin: 5px;
+            font-size: 12px;
+        }
+        .pg::after{
+            content: "품절!!";
+            background-color: green;
+            color: white;
+            margin: 5px;
+            font-size: 12px;
+        }
+        .ph::after{
+            content: "품절!!";
+            background-color: green;
+            color: white;
+            margin: 5px;
+            font-size: 12px;
+        }              
+    </style>
+</head>
+<body>
+    <div>
+        <h1>제품 목록</h1>
+        <ul>
+            <li class="pa">제품 A</li>
+            <li>제품 B</li>
+            <li>제품 C</li>
+            <li class="pd">제품 D</li>
+            <li>제품 E</li>
+            <li class="pf">제품 F</li>
+            <li class="pg">제품 G</li>
+            <li class="ph">제품 H</li>
+        </ul>
+    </div>
+</body>
+</html>
