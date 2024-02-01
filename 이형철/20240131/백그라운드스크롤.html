@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백그라운드 스크롤</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h3{
+
+            font-size: 70px;
+            font-weight: 800;
+            line-height: 700px;
+            color: white;
+            text-align: center;
+        }
+        .section1{
+            height: 700px;
+            background: url(images/background1.jpg) no-repeat 50% 0 fixed;
+            background-size: cover;
+        }
+        .section2{
+            height: 700px;
+            background: url(images/background2.jpg) no-repeat 50% 0 scroll;
+            /* scroll은 기본값 넣어도 안넣어도 같음 */
+            background-size: cover;
+        }
+        .section3{
+            height: 700px;
+            background: url(images/background3.jpg) no-repeat 50% 0 fixed;
+            background-size: cover;
+        }
+        .section4{
+            height: 700px;
+            background: url(images/background4.jpg) no-repeat 50% 0;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <section class="section1">
+            <h3> WEB FRONTED</h3>
+        </section>
+        <section class="section2">
+            <h3> WEB FRONTED</h3>
+        </section>
+        <section class="section3">
+            <h3> WEB FRONTED</h3>
+        </section>
+        <section class="section4">
+            <h3> WEB FRONTED</h3>
+        </section>
+    </div>
+</body>
+</html>
