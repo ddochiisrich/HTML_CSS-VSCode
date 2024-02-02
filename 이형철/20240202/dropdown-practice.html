@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운</title>
+
+    <style>
+
+        body{
+            display: flex;
+        }
+
+        li:hover{
+            background-color: pink;
+            border-radius: 10px;
+
+        }
+        ul{
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            border-radius: 10px;
+            align-items: center;
+        }
+        .dropbtn{
+            background-color: lightblue;
+            width: 200px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown-content{
+            display: none; /* 안보이게 */ 
+        }
+        .dropbtn:hover .dropdown-content{
+            display: block; /* 보이게 */           
+        }
+
+        .dropdown-content li a{
+            text-decoration: none;
+            color: gray;
+        }
+        .dropdown-content li a:hover{
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="dropdown1">
+        <ul class="dropbtn">드롭다운
+            <div class="dropdown-content">
+                <li class="btn"><a href="#">서브메뉴1</a></li>
+                <li class="btn"><a href="#">서브메뉴2</a></li>
+                <li class="btn"><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+    </div>   
+    <div class="dropdown2">
+        <ul class="dropbtn">드롭다운
+            <div class="dropdown-content">
+                <li class="btn"><a href="#">서브메뉴1</a></li>
+                <li class="btn"><a href="#">서브메뉴2</a></li>
+                <li class="btn"><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+    </div> 
+    <div class="dropdown3">
+        <ul class="dropbtn">드롭다운
+            <div class="dropdown-content">
+                <li class="btn"><a href="#">서브메뉴1</a></li>
+                <li class="btn"><a href="#">서브메뉴2</a></li>
+                <li class="btn"><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+    </div>
+</body>
+</html>

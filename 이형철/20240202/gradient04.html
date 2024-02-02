@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient 원형</title>
+    <style>
+        div{
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            margin: 10px auto;
+            box-shadow: 10px 10px 10px gray;
+        }
+        .grad1{
+            background: green;
+            background: radial-gradient(circle at 20% 20%, yellow, orange);
+            /* 20% 20%에서 시작하여 노랑에서 오렌지로 바뀌는 원형 그라데이션 */
+        }
+        .grad2{
+            background: blue;
+            background: radial-gradient(circle at 30%, white, lightblue, blue);
+        }
+        .grad3{
+            background: pink;
+            background: radial-gradient(circle at 70% 80%, white, pink, hotpink);
+        }
+    </style>
+</head>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+</body>
+</html>

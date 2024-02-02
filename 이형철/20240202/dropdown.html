@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운</title>
+    <style>
+
+        body{
+            display: flex;
+        }
+
+        li:hover{
+            background-color: pink;
+            border-radius: 10px;
+
+        }
+        ul{
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            border-radius: 10px;
+            align-items: center;
+        }
+        /* 첫번째 드롭다운 */
+        .dropbtn1{
+            background-color: lightblue;
+            width: 200px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown-content1{
+            display: none; /* 안보이게 */ 
+        }
+        .dropbtn1:hover .dropdown-content1{
+            display: block; /* 보이게 */           
+        }
+
+        .dropdown-content1 li a{
+            text-decoration: none;
+            color: gray;
+        }
+        .dropdown-content1 li a:hover{
+            color: black;
+        }
+
+        /* 두번째 드롭다운 */
+        .dropbtn2{
+            background-color: lightblue;
+            width: 200px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .dropdown-content2{
+            display: none; /* 안보이게 */ 
+        }
+        .dropbtn2:hover .dropdown-content2{
+            display: block; /* 보이게 */           
+        }
+
+        .dropdown-content2 li a{
+            text-decoration: none;
+            color: gray;
+        }
+        .dropdown-content2 li a:hover{
+            color: black;
+        }
+        /* 세번째 드롭다운 */
+        .dropbtn3{
+            background-color: lightblue;
+            width: 200px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .dropdown-content3{
+            display: none; /* 안보이게 */ 
+        }
+        .dropbtn3:hover .dropdown-content3{
+            display: block; /* 보이게 */           
+        }
+
+        .dropdown-content3 li a{
+            text-decoration: none;
+            color: gray;
+            width: 200px;
+        }
+        .dropdown-content3 li a:hover{
+            color: black;
+        }        
+    </style>
+</head>
+<body>
+    <div class="dropdown1">
+        <ul class="dropbtn1">드롭다운
+            <div class="dropdown-content1">
+                <li class="btn1"><a href="#">서브메뉴1</a></li>
+                <li class="btn2"><a href="#">서브메뉴2</a></li>
+                <li class="btn3"><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+    </div>   
+    <div class="dropdown2">
+        <ul class="dropbtn2">드롭다운
+            <div class="dropdown-content2">
+                <li class="btn3"><a href="#">서브메뉴1</a></li>
+                <li class="btn4"><a href="#">서브메뉴2</a></li>
+                <li class="btn5"><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+    </div> 
+    <div class="dropdown3">
+        <ul class="dropbtn3">드롭다운
+            <div class="dropdown-content3">
+                <li class="btn6"><a href="#">서브메뉴1</a></li>
+                <li class="btn7"><a href="#">서브메뉴2</a></li>
+                <li class="btn8"><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+    </div>
+</body>
+</html>

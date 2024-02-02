@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradien01</title>
+    <style>
+        div{
+            width: 500px;
+            height: 350px;
+            border: 1px solid;
+            border-radius: 20px;
+        }
+        .grad{
+
+            background: red;
+            background: linear-gradient(45deg, red, white);
+            /* 표준 구문 : 45도 방향으로 (오른쪽 위), 빨강에서 흰색으로 */
+            /* 
+            0도 위쪽 방향 12시
+            90도  오른쪽 방향 3시
+            180도 아래쪽 방향 6시
+            270도 왼쪽 방향 9시
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="grad"></div>
+</body>
+</html>
