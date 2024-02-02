@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mon_webtoon</title>
+    <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
+    <style>
+        .webtoon-mon-container{
+            width: 840px;
+            /* border: 1px solid red; */
+        }
+        .webtoon-mon-container-header{
+            display: flex;
+            width: 840px;
+            height: 50px;
+            align-items: center;
+            justify-content: space-between;
+            /* border: 1px solid red; */
+        }
+        .header-button1{
+            border: none;
+            background-color: white;
+            color: #00dc64;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .header-button2{
+            border: none;
+            background-color: white;
+            color: #666;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .header-button3{
+            border: none;
+            background-color: white;
+            color: #666;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .header-button4{
+            border: none;
+            background-color: white;
+            color: #666;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .content-list{
+            width: 840px;
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid red; */
+        }
+        .content-item{
+            list-style: none;
+            display: inline-block;
+            margin: 1.7px;
+            align-items: center;
+            /* border: 1px solid blue; */
+        }
+
+        .content-item-rate{
+            color: gray;
+            font-size: 13px;
+        }
+        .content-item-text{
+            /* border: 1px solid yellow; */
+            margin: 0;
+            padding: 0px 5px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .webtoon-name{
+            font-size: 15px;
+        }
+        .webtoon-writer{
+            font-size: 14px;
+        }
+        .fa-star{
+            color: gray;
+            font-size: 13px;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="webtoon-mon-container">
+        <div class="webtoon-mon-container-header">
+            <div class="webtoon-mon-container-header-h2">
+                <h2>전체 월요 웹툰</h2>
+            </div>
+            <div class="webtoon-mon-container-header-button">
+                <button class="header-button1">인기순</button>
+                <button class="header-button2">업데이트순</button>
+                <button class="header-button3">조회순</button>
+                <button class="header-button4">별점순</button>
+            </div>
+        </div>
+
+        <div class="webtoon-mon-container-main" >
+            <ul class="content-list">
+                <li class="content-item">
+                    <a class="webtoon-link" href="https://comic.naver.com/webtoon/list?titleId=819217&tab=mon"><img src="https://image-comic.pstatic.net/webtoon/819217/thumbnail/thumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg" width="160" height="207"></a>
+                    <div class="content-item-text">
+                        <a href="https://comic.naver.com/webtoon/list?titleId=819217&tab=mon" class="webtoon-name">12시네 점심</a>
+                        <br><a href="https://comic.naver.com/webtoon/list?titleId=819217&tab=mon" class="webtoon-writer">조석</a>
+                        <br><span class="content-item-rate"><i class="fa-solid fa-star"></i>9.91</span>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <a class="webtoon-link" href="https://comic.naver.com/webtoon/list?titleId=648419&tab=mon"><img src="https://image-comic.pstatic.net/webtoon/648419/thumbnail/thumbnail_IMAG21_d9398229-cbfd-47dc-9208-0a6fb936f3a7.jpg" width="160" height="207"></a>
+                    <div class="content-item-text">
+                        <a href="https://comic.naver.com/webtoon/list?titleId=648419&tab=mon" class="webtoon-name">뷰티풀 군바리</a>
+                        <br><a href="https://comic.naver.com/webtoon/list?titleId=648419&tab=mon" class="webtoon-writer">설이 / 윤성원</a>
+                        <br><span class="content-item-rate"><i class="fa-solid fa-star"></i>9.81</span>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <a class="webtoon-link" href="https://comic.naver.com/webtoon/list?titleId=817859&tab=mon"><img src="https://image-comic.pstatic.net/webtoon/817859/thumbnail/thumbnail_IMAG21_4fadf2ae-3467-4a9d-a6be-4b0313b963e0.jpg" width="160" height="207"></a>
+                    <div class="content-item-text">
+                        <a href="https://comic.naver.com/webtoon/list?titleId=817859&tab=mon" class="webtoon-name">왕과의 야행</a>
+                        <br><a href="https://comic.naver.com/webtoon/list?titleId=817859&tab=mon" class="webtoon-writer">보리</a>
+                        <br><span class="content-item-rate"><i class="fa-solid fa-star"></i>9.98</span>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <a class="webtoon-link" href="https://comic.naver.com/webtoon/list?titleId=733074&tab=mon"><img src="https://image-comic.pstatic.net/webtoon/733074/thumbnail/thumbnail_IMAG21_80df3e76-47af-4007-b57c-e8f2830835e5.jpg" width="160" height="207"></a>
+                    <div class="content-item-text">
+                        <a href="https://comic.naver.com/webtoon/list?titleId=733074&tab=mon" class="webtoon-name">백수세끼</a>
+                        <br><a href="https://comic.naver.com/webtoon/list?titleId=733074&tab=mon" class="webtoon-writer">치즈</a>
+                        <br><span class="content-item-rate"><i class="fa-solid fa-star"></i>9.86</span>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <a class="webtoon-link" href="https://comic.naver.com/webtoon/list?titleId=183559&tab=mon"><img src="https://image-comic.pstatic.net/webtoon/183559/thumbnail/thumbnail_IMAG21_5f3fec31-5c95-4afe-a73f-3046288edb47.jpg" width="160" height="207"></a>
+                    <div class="content-item-text">
+                        <a href="https://comic.naver.com/webtoon/list?titleId=183559&tab=mon" class="webtoon-name">신의탑</a>
+                        <br><a href="https://comic.naver.com/webtoon/list?titleId=183559&tab=mon" class="webtoon-writer">SIU</a>
+                        <br><span class="content-item-rate"><i class="fa-solid fa-star"></i>9.87</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="content-list">
+                <li class="content-item">
+                    <a class="webtoon-link" href="https://comic.naver.com/webtoon/list?titleId=783052&tab=mon"><img src="https://image-comic.pstatic.net/webtoon/783052/thumbnail/thumbnail_IMAG21_800f4c56-26ac-419e-9ed0-baf322311dea.jpg" width="160" height="207"></a>
+                    <div class="content-item-text">
+                        <a href="https://comic.naver.com/webtoon/list?titleId=783052&tab=mon" class="webtoon-name">퀘스트 지상주의</a>
+                        <br><a href="https://comic.naver.com/webtoon/list?titleId=783052&tab=mon" class="webtoon-writer">박태준 만화회사</a>
+                        <br><span class="content-item-rate"><i class="fa-solid fa-star"></i>9.66</span>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <a class="webtoon-link" href="https://comic.naver.com/webtoon/list?titleId=728750&tab=mon"><img src="https://image-comic.pstatic.net/webtoon/728750/thumbnail/thumbnail_IMAG21_47c21251-b213-4882-bacc-15adce1acfc8.jpg" width="160" height="207"></a>
+                    <div class="content-item-text">
+                        <a href="https://comic.naver.com/webtoon/list?titleId=728750&tab=mon" class="webtoon-name">장씨세가 호위무사</a>
+                        <br><a href="https://comic.naver.com/webtoon/list?titleId=728750&tab=mon" class="webtoon-writer">김인호 / 조형근</a>
+                        <br><span class="content-item-rate"><i class="fa-solid fa-star"></i>9.93</span>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <a class="webtoon-link" href="https://comic.naver.com/webtoon/list?titleId=602910&tab=mon"><img src="https://image-comic.pstatic.net/webtoon/602910/thumbnail/thumbnail_IMAG21_e861f2cf-6157-4d33-8e02-7b4cbf0a8baf.jpg" width="160" height="207"></a>
+                    <div class="content-item-text">
+                        <a href="https://comic.naver.com/webtoon/list?titleId=602910&tab=mon" class="webtoon-name">윈드브레이커</a>
+                        <br><a href="https://comic.naver.com/webtoon/list?titleId=602910&tab=mon" class="webtoon-writer">조용석</a>
+                        <br><span class="content-item-rate"><i class="fa-solid fa-star"></i>9.84</span>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <a class="webtoon-link" href="https://comic.naver.com/webtoon/list?titleId=739115&tab=mon"><img src="https://image-comic.pstatic.net/webtoon/739115/thumbnail/thumbnail_IMAG21_7077747896626722102.jpg" width="160" height="207"></a>
+                    <div class="content-item-text">
+                        <a href="https://comic.naver.com/webtoon/list?titleId=739115&tab=mon" class="webtoon-name">앵무살수</a>
+                        <br><a href="https://comic.naver.com/webtoon/list?titleId=739115&tab=mon" class="webtoon-writer">김성진</a>
+                        <br><span class="content-item-rate"><i class="fa-solid fa-star"></i>9.97</span>
+                    </div>
+                </li>
+                <li class="content-item">
+                    <a class="webtoon-link" href="https://comic.naver.com/webtoon/list?titleId=795297&tab=mon"><img src="https://image-comic.pstatic.net/webtoon/795297/thumbnail/thumbnail_IMAG21_ceeeead6-8a9c-48ec-a793-f3cc092a0b10.jpg" width="160" height="207"></a>
+                    <div class="content-item-text">
+                        <a href="https://comic.naver.com/webtoon/list?titleId=795297&tab=mon" class="webtoon-name">신화급 귀속 아이템...</a>
+                        <br><a href="https://comic.naver.com/webtoon/list?titleId=795297&tab=mon" class="webtoon-writer">정선율 / 헤스</a>
+                        <br><span class="content-item-rate"><i class="fa-solid fa-star"></i>9.91</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

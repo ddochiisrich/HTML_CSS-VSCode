@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>realtimerate</title>
+    <style>
+        .realtimerate{
+            width: 300px;
+            height: 509px;
+            border: 1px solid red;
+        }
+        .realtimerate-head-top{
+            display: flex;
+            /* border: 1px solid red; */
+            padding: 0px 5px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .realtimerate-head-top-button1{
+            background-color: white;
+            padding: 0;
+            font-weight: bold;
+            border-style: none;
+            color: #666;
+            cursor: pointer;
+        }
+        .realtimerate-head-top-button2{
+            background-color: white;
+            padding: 0;
+            font-weight: bold;
+            border-style: none;
+            color: #666;
+            cursor: pointer;
+        }
+        .realtimerate-head-top-button3{
+            background-color: white;
+            padding: 0;
+            font-weight: bold;
+            border-style: none;
+            color: #00dc64;
+            cursor: pointer;
+        }
+        .realtimerate-head-top-button2::before{
+            width: 3px;
+            height: 3px;
+            top: 42px;
+            left: 240px;
+            position: absolute;
+            content: "";
+            background: #666;
+            border-radius: 50%;
+        }
+        .realtimerate-head-top-button3::before{
+            width: 3px;
+            height: 3px;
+            top: 42px;
+            left: 273px;
+            position: absolute;
+            content: "";
+            background: #666;
+            border-radius: 50%;
+        }
+        .realtimerate-main-rate{
+            margin: 0;
+            padding: 0;
+        }
+        .realtimerate-main-rate > li{
+            list-style: none;
+            border: 1px solid red;
+        }
+        .divide{
+            background: #afafaf;
+            height: 1px;
+            border: 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="realtimerate">
+        <div class="realtimerate-head">
+            <div class="realtimerate-head-top">
+                <h3><span>실시간 인기웹툰</span></h3>
+                <div class="realtimerate-head-top-buttons">
+                    <button class="realtimerate-head-top-button1">전체</button>
+                    <button class="realtimerate-head-top-button2">여성</button>
+                    <button class="realtimerate-head-top-button3">남성</button>
+                </div>
+            </div>
+            <hr class="divide">
+            <div class="realtimerate-main">
+                <ul class="realtimerate-main-rate">
+                    <li class="realtimerate-main-rate-1">
+                        <div class="realtimerate-main-rate-1-1">
+                            <img src="https://image-comic.pstatic.net/webtoon/641253/thumbnail/thumbnail_IMAG21_01672165-03c8-44b1-ba0e-ef82c9cfcd10.jpg" width="60px" height="80px">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
