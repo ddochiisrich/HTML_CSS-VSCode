@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> rotate 3D </title>
+    <style>
+        img{
+            width: 150px;
+        }
+        .origin{
+            perspective: 200px; /* 😍 원근감 : 3차원 적용 */
+            border: 1px solid;
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background-color: black;
+        }
+        .rotatex{
+            /* x축을 기준으로 시계방향으로 45도 회전 */
+            transform: rotateX(45deg);
+        }
+        .rotatey{
+            /* y축을 기준으로 시계방향으로 45도 회전 */
+            transform: rotatey(45deg);
+        }
+        .rotatez{
+            /* z축을 기준으로 시계방향으로 45도 회전 */
+            transform: rotatez(45deg);
+        }
+        .rotatexyz{
+            /* x축, y축, z축, 벡터로 45도 회전 */
+            transform:rotate3d(2.5, 1.2, -1.5, 45deg);
+        }
+    </style>
+</head>
+<body>
+    <h2> 이미지 3차원 회전하기 </h2>
+    <div class="origin">
+        <div class="rotatex"><img src="./images/모코코1.jpg"></div>
+    </div>
+    <div class="origin">
+        <div class="rotatey"><img src="./images/모코코1.jpg"></div>
+    </div>
+    <div class="origin">
+        <div class="rotatez"><img src="./images/모코코1.jpg"></div>
+    </div>
+    <div class="origin">
+        <div class="rotatexyz"><img src="./images/모코코1.jpg"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scale</title>
+    <style>
+        .origin{
+            border: 1px solid;
+            width: 150px;
+            margin: 50px;
+        }
+        .scalex:hover{
+            /* 가로로 1.5배 확대 */
+            transform: scaleX(1.5);
+        }
+        .scaley:hover{
+            /* 세로로 1.2배 확대 */
+            transform: scaleY(1.5);
+        }
+        .scale:hover{
+            /* 가로세로 0.7배 축소 */
+            transform: scale(0.7);
+        }
+    </style>
+</head>
+<body>
+    <h2> 이미지 확대, 축소하기</h2>
+    
+    <div class="origin">
+        <div class="scalex"><img src="./images/모코코2.jpg" width="150px"></div>
+    </div>
+    <div class="origin">
+        <div class="scaley"><img src="./images/모코코2.jpg" width="150px"></div>
+    </div>
+    <div class="origin">
+        <div class="scale"><img src="./images/모코코2.jpg" width="150px"></div>
+    </div>
+</body>
+</html>
