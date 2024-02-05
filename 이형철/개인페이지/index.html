@@ -93,9 +93,45 @@
             height: 600px;
             border: 1px solid;
         }
+        .worksbutton{
+            text-align: center;
+            justify-content: center;
+        }
+        .portfoliobutton{
+            background-color: pink;
+            border-radius: 5px;
+            border-style: none;
+            font-size: 25px;
+            margin: 70px 20px;
+            cursor: pointer;
+
+        }
+        .worksimg{
+            text-align: center;
+        }
+        .worksimgnaver{
+            display: flex;
+            margin: 50px;
+        }
+        .works-naver{
+            width: 500px;
+            border: 3px solid rgb(255, 239, 190);
+        }
+        .workscontent{
+            margin: 0 30px;
+            display: flex;
+        }
+        .mainsentence{
+            font-size: 30px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .subsentence{
+            font-size: 15px;
+        }
         /* contact */
         .contactstatus{
-            height: 600px;
+            height: 400px;
             border: 1px solid;            
         }
     </style>
@@ -146,8 +182,22 @@
         </div>
 
         <div class="worksstatus">
-            <h2>첫번째 조별과제</h2>
-            <p>네이버 홈페이지 카피하기</p>
+            <div class="worksbutton">
+                <a href="#"><button class="portfoliobutton" type="button">네이버</button></a>
+                <button class="portfoliobutton" type="button">다음</button>
+                <button class="portfoliobutton" type="button">구글</button>
+                <button class="portfoliobutton" type="button">로스트아크</button>
+            </div>
+            <div class="worksimg">
+                <div class="worksimgnaver">
+                    <div class="workscontent">
+                        <span class="mainsentence">네이버</span> <span class="subsentence">(1차 조별과제)</span>
+                    </div>
+                    <div class="workscontent">
+                        <img class="works-naver" src="./images/works_naver.png" alt="">
+                    </div>
+                    </div>
+            </div>
 
         </div>
 
