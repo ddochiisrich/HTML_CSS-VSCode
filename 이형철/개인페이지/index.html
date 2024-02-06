@@ -10,6 +10,22 @@
     <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .topButton{
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+        }
+        .topButton img{
+            width: 30px;
+        }
+        .topButton:hover{
+            transform: scale(1.2);
+            transition: 0.3s;
+        }
 
         body{
             /* background: url(./images/landscape.jpg); */
@@ -17,10 +33,10 @@
             /* background-repeat: repeat-y; */
             background-color: rgb(253, 250, 241);
             font-family: 'Gowun Dodum', sans-serif;
-            width: 1000px;
+            width: 100%;
             margin: 0 auto;
         }
-        /* 네브바 */
+        /* nav */
         nav{
             background-color: rgba(255, 255, 255, 0.212);
             width: 100%;
@@ -29,7 +45,7 @@
 
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around;
             border-bottom: 1px solid #b8b8b8;
         }
         .navul{
@@ -55,50 +71,112 @@
             color: black;
         }
 
+
         /* about */
         .introduce{
-            height: 600px;
+            height: 850px;
             padding: 30px;
-            border: 1px solid;
+            /* border: 1px solid; */
         }
-        .introducement{
+        .introducement1{
             text-align: right;
             font-size: 50px;
-            margin-right: 30px;
+            position: relative;
+            right: 10%;
+            top: 20%;  
+
+            animation: aboutText1 2s ease;
+        }
+        .introducement2{
+            text-align: right;
+            font-size: 50px;
+            position: relative;
+            right: 10%;
+            top: 15%;  
+            animation: aboutText2 3s ease;
         }
         .introduce-content{
             text-align: right;
-            margin-right: 30px;
+            position: relative;
+            right: 10%;
+            top: 20%;
+            animation: aboutText3 3s ease;
+
         }
+        @keyframes aboutText1{
+            from{
+                right: -5%;
+            }
+            to{
+                right: 10%;
+            }
+        }
+        @keyframes aboutText2{
+            from{
+                right: -15%;
+            }
+            to{
+                right: 10%;
+            }
+        }
+        @keyframes aboutText3{
+            from{
+                right: -45%;
+            }
+            to{
+                right: 10%;
+            }
+        }
+
+    
         /* profile */
         .aboutprofile{
-            display: flex;
             margin: 0 auto;
             justify-content: center;
             align-items: center;
-            height: 600px;
-            border: 1px solid;
+            height: 930px;
+            padding-top: 40px;
+            /* border: 1px solid; */
+        }
+        .profileTextArea{
+            display: flex;
+            margin: 10px;
+            justify-content: center;
         }
         .profilestatus{
             margin: 50px;
+            font-size: 20px;
+        }
+        .profilestatus:hover{
+            transform: scale(1.1);
+            transition:  1s ease;
+        }
+        .profilehistory:hover{
+            transform: scale(1.1);
+            transition:  1s ease;
         }
         .profilehistory{
             margin: 50px;
+            font-size: 20px;
         }
-        .prifoleimg{
-            margin: 50px 0px 50px 50px;
+        .profileimg{
+
+            text-align: center;
         }
         /* works */
         .worksstatus{
-            height: 600px;
-            border: 1px solid;
+            width: 100%;
+            height: 930px;
+            /* border: 1px solid; */
+            text-align: center;
         }
         .worksbutton{
             text-align: center;
             justify-content: center;
         }
         .portfoliobutton{
-            background-color: pink;
+            background-color: rgb(230, 227, 218);
+
             border-radius: 5px;
             border-style: none;
             font-size: 25px;
@@ -110,16 +188,18 @@
             text-align: center;
         }
         .worksimgnaver{
-            display: flex;
-            margin: 50px;
+            width: 100%;
+            margin: 0px;
+
         }
         .works-naver{
             width: 500px;
             border: 3px solid rgb(255, 239, 190);
         }
-        .workscontent{
-            margin: 0 30px;
+        .workscontent1{
             display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .mainsentence{
             font-size: 30px;
@@ -129,40 +209,78 @@
         .subsentence{
             font-size: 15px;
         }
+        #workscontent3{
+
+            width: 500px;
+            height: 400px;
+            overflow: hidden;
+            /* border: 1px solid red; */
+            box-shadow: 0 0 20px lightgray;
+            margin: 0 auto;
+
+        }
+        .workscontentnaver{
+
+            width: 300px;
+            height: 150px;
+            display: flex;
+            padding-left: 0;
+            margin-left: 0;
+            list-style: none;
+            position: relative;
+            animation: slideAni 10s infinite ease ;
+        }
+        .workscontentnaver li{
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        @keyframes slideAni{
+            0%{left: 0;}
+            25%{left: -500px;}
+            50%{left: -1000px;}
+            75%{left: -1500px;}
+            100%{left: 0px;}
+        }
         /* contact */
         .contactstatus{
-            height: 400px;
-            border: 1px solid;            
+            height: 930px;
+            /* border: 1px solid; */
         }
+
     </style>
 
 </head>
 <body>
-    <div class="container">
+    <a class="topButton" id="topButton" href="#container"><img src="./images/swipe.png" title="위로가기"></a>
+
+
+    <div class="container" id="container">
         <nav>
             <div class="navlogo"><i class="fa-solid fa-code"></i></div>       
             <div class="navbar">
                 <ul class="navul">
-                    <li><a class="menu1" href="#">main</a></li>
-                    <li><a class="menu1" href="#">about</a></li>
-                    <li><a class="menu1" href="#">works</a></li>
-                    <li><a class="menu1" href="#">contact</a></li>
+                    <li><a class="menu1" href="#container">main</a></li>
+                    <li><a class="menu1" href="#aboutprofile">about</a></li>
+                    <li><a class="menu1" href="#worksstatus">works</a></li>
+                    <li><a class="menu1" href="#contactstatus">contact</a></li>
                 </ul>
             </div>
         </nav>
 
 
-        <div class="introduce">
-            <p class="introducement">안녕하세요</p>
-            <p class="introducement">이형철 입니다</p>
-            <p class="introduce-content">내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
+        <div class="introduce" id="introduce">
+            <p class="introducement1">안녕하세요</p>
+            <p class="introducement2">이형철 입니다</p>
+            <p class="introduce-content">하나하나 차근차근 배워가는 개발자 지망생</p>
         </div>
 
 
-        <div class="aboutprofile">
-            <div class="prifoleimg">
+        <div class="aboutprofile" id="aboutprofile">
+            <div class="profileimg">
                 <img src="./images/robot-8449206_1280.jpg" width="150px">
             </div>    
+            <div class="profileTextArea" >
             <div class="profilestatus">
                 <h2>Profile</h2>
                 <p>이 름 : 이 형 철</p>
@@ -180,31 +298,44 @@
                 <p>&nbsp;</p>
             </div>
         </div>
+        </div>
 
-        <div class="worksstatus">
+        <div class="worksstatus" id="worksstatus">
             <div class="worksbutton">
                 <a href="#"><button class="portfoliobutton" type="button">네이버</button></a>
-                <button class="portfoliobutton" type="button">다음</button>
-                <button class="portfoliobutton" type="button">구글</button>
-                <button class="portfoliobutton" type="button">로스트아크</button>
+                <button class="portfoliobutton" type="button">Button</button>
+                <button class="portfoliobutton" type="button">Button</button>
             </div>
             <div class="worksimg">
                 <div class="worksimgnaver">
-                    <div class="workscontent">
+                    <div class="workscontent1">
                         <span class="mainsentence">네이버</span> <span class="subsentence">(1차 조별과제)</span>
                     </div>
-                    <div class="workscontent">
-                        <img class="works-naver" src="./images/works_naver.png" alt="">
+
+                    <div class="workcontent2">
+                        <h4>맡은내용 : 홈페이지 메인 캘린더위젯, 메모위젯, 메모창, 요일별 웹툰리스트</h4>
+                        <a href="https://hijunho0811.github.io/naver.html" target="_blank"><p><img src="./images/link_icon.png" alt="" width="40px"></p></a>
                     </div>
+
+                    <div class="workscontent3" id="workscontent3">
+                        <ul class="workscontentnaver">
+                            <li><img src="./images/naver.png" alt="" width="500px" height="400px"></li>
+                            <li><img src="./images/naver_01.png" alt="" width="500px" height="400px"></li>
+                            <li><img src="./images/naver_02.png" alt="" width="500px" height="400px"></li>
+                            <li><img src="./images/naver_03.png" alt="" width="500px" height="400px"></li>
+                        </ul>
                     </div>
+                </div>
             </div>
 
         </div>
 
-        <div class="contactstatus">
+        <div class="contactstatus" id="contactstatus">
             <p>연락처 : 010 . 7121 . 6870</p>
             <p>이메일 : ddochiisrich@gmail.com</p>
         </div>
     </div>
 </body>
+
+
 </html>
