@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> video </title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+        }
+        #myVideo{
+            position: fixed;
+            opacity: 0.5;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .content{
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            color: aliceblue;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video controls autoplay muted loop id="myVideo">
+        <source src="./images/woman.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet, an his etiam torquatos
+            rollit soleat phaedrum to duo,
+            eum cu recteque expetendis neglegentur.
+            cu mentitum maisetatis persequeris pro,
+            pri ponderum tractatos ei.
+
+        </p>
+    </div>
+</body>
+</html>

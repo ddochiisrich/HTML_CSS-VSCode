@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 auto;
+        }
+        .header{
+            width: 100%;
+        }
+        
+        .dropbox{
+            display: flex;
+            color: gray;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            height: 70px;
+            background-color: lightgray;
+            justify-content: center;
+
+        }
+        .menuDrop{
+            margin: 10px;
+            list-style: none;
+            background-color: lightgray;
+            width: 200px;
+            height: 50px;
+            /* border: 1px solid; */
+            cursor: pointer;
+            padding: 0;
+            text-align: center;
+            line-height: 45px;
+        }
+        .menuDropContent{
+            display: none;
+            padding: 10px;
+        }
+
+        .menuDrop:hover .menuDropContent{
+            display: block;
+            background-color: lightgray;
+
+        }
+        .menuDropContent:hover{
+            color: black;
+            transform: scale(1.1);
+            transition: 0.5s;
+            border-radius: 5px;
+        }
+
+
+
+        .main{
+            width: 100%;
+            margin-top: 200px;
+            justify-content: center;
+            /* border: 1px solid red; */
+        }
+        .main h2{
+            width: 100%;
+            margin-left: -355px;
+            text-align: center;
+
+        }
+        .mainItem{
+            display: flex;
+            justify-content: center;
+        }
+        .firContent{
+            /* border: 1px solid red; */
+            width: 250px;
+            text-align: center;
+            margin: 20px;
+        }
+        .firContent:hover .firContentText{
+            transform: scale(1.2);
+            transition: 1s;
+        }
+        .firContent:hover .firContentImg{
+            transform: scale(1.2);
+            transition: 1s;
+        }
+        .secContent{
+            /* border: 1px solid red; */
+            width: 250px;
+            text-align: center;
+            margin: 20px;
+        }
+        .secContent:hover .secContentText{
+            transform: scale(1.2);
+            transition: 1s;
+        }
+        .secContent:hover .secContentImg{
+            transform: scale(1.2);
+            transition: 1s;
+        }
+        .thrContent{
+            /* border: 1px solid red; */
+            width: 250px;
+            text-align: center;
+            margin: 20px;
+        }
+        .thrContent:hover .thrContentText{
+            transform: scale(1.2);
+            transition: 1s;
+        }
+        .thrContent:hover .thrContentImg{
+            transform: scale(1.2);
+            transition: 1s;
+        }
+
+
+
+        .footer{
+            background-color:  lightgrey;
+            width: 100%;
+            height: 100px;
+            color: gray;
+            /* border: 1px solid; */
+            margin-top: 100px;
+            margin-bottom: 0px;
+            line-height: 100px;
+            text-align: center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav class="dropbox">
+            <ul class="menuDrop">DropDown
+                <li class="menuDropContent">MENU 1</li>
+                <li class="menuDropContent">MENU 2</li>
+                <li class="menuDropContent">MENU 3</li>
+            </ul>
+            <ul class="menuDrop">DropDown
+                <li class="menuDropContent">MENU 1</li>
+                <li class="menuDropContent">MENU 2</li>
+                <li class="menuDropContent">MENU 3</li>
+            </ul>
+            <ul class="menuDrop">DropDown
+                <li class="menuDropContent">MENU 1</li>
+                <li class="menuDropContent">MENU 2</li>
+                <li class="menuDropContent">MENU 3</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        <h2>인기 상품순</h2>
+        <div class="mainItem">
+        <div class="firContent">
+            <div class="firContentImg">
+                <img src="./images/temple.jpg" width="250px" height="150px">
+            </div>
+            <div class="firContentText">
+                <h1>태국</h2>
+                <pre>5박 6일 태국 자유여행 패키지 <br>가격 : 750,000원 </pre>
+            </div>
+        </div>
+        <div class="secContent">
+            <div class="secContentImg">
+                <img src="./images/japan.jpg" width="250px" height="150px">
+            </div>
+            <div class="secContentText">
+                <h1>일본</h2>
+                <pre>4박 5일 일본 자유여행 패키지 <br>가격 : 600,000원 </pre>
+            </div>
+        </div>
+        <div class="thrContent">
+            <div class="thrContentImg">
+                <img src="./images/sea.jpg" width="250px" height="150px">
+            </div>
+            <div class="thrContentText">
+                <h1>하와이</h2>
+                <pre>6박 7일 하와이 자유여행 패키지 <br>가격 : 1,200,000원 </pre>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>푸터</h2>
+    </div>
+</body>
+</html>
