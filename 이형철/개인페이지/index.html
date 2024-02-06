@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 안녕하세요 이형철입니다 </title>
+    <title> 안녕하세요! 이형철입니다 </title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="./icons/site.webmanifest">
 
     <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
 
@@ -38,9 +43,11 @@
         }
         /* nav */
         nav{
-            background-color: rgba(255, 255, 255, 0.212);
+            background-color: rgb(253, 250, 241);
+            z-index: 1;
             width: 100%;
             height: 100px;
+            position: fixed;
 
 
             display: flex;
@@ -53,8 +60,16 @@
         }
         nav li{
             list-style: none;
-            margin: 10px;
+            /* margin: 15px; */
             font-size: 30px;
+        }
+        .menu1::after{
+            display: inline-block;
+            content: "";
+            width: 1px;
+            height: 20px;
+            background-color: #e1e1e1;
+            margin: 0px 15px;
         }
         .menu1:hover{
             color: gray;
@@ -66,6 +81,10 @@
         nav li a:visited{
             color: black;
         }
+        .navcap{
+            font-weight: bold;
+            font-size: 40px;
+        }
         .fa-code{
             font-size: 50px;
             color: black;
@@ -74,7 +93,7 @@
 
         /* about */
         .introduce{
-            height: 850px;
+            height: 750px;
             padding: 30px;
             /* border: 1px solid; */
         }
@@ -134,7 +153,7 @@
             margin: 0 auto;
             justify-content: center;
             align-items: center;
-            height: 930px;
+            height: 800px;
             padding-top: 40px;
             /* border: 1px solid; */
         }
@@ -160,29 +179,35 @@
             font-size: 20px;
         }
         .profileimg{
-
+            margin-top: 100px;
             text-align: center;
         }
         /* works */
         .worksstatus{
             width: 100%;
-            height: 930px;
+            height: 800px;
             /* border: 1px solid; */
             text-align: center;
         }
         .worksbutton{
             text-align: center;
             justify-content: center;
+
         }
         .portfoliobutton{
             background-color: rgb(230, 227, 218);
-
+            box-shadow: 1px 4px 0 rgb(0,0,0,0.5);
             border-radius: 5px;
             border-style: none;
             font-size: 25px;
-            margin: 70px 20px;
+            margin: 130px 20px 20px 20px;
             cursor: pointer;
 
+        }
+        .portfoliobutton:active{
+            box-shadow: 1px 1px 0 rgb(0, 0, 0, 0.5);
+            position: relative;
+            top: 2px;
         }
         .worksimg{
             text-align: center;
@@ -228,7 +253,7 @@
             margin-left: 0;
             list-style: none;
             position: relative;
-            animation: slideAni 10s infinite ease ;
+            animation: slideAni 20s infinite ease ;
         }
         .workscontentnaver li{
             align-items: center;
@@ -244,8 +269,17 @@
         }
         /* contact */
         .contactstatus{
-            height: 930px;
+            width: 100%;
+            height: 800px;
             /* border: 1px solid; */
+        }
+        .contactstatusText{
+
+            text-align: center;
+            /* border: 1px solid; */
+        }
+        .contactarea{
+            height: 700px;
         }
 
     </style>
@@ -257,20 +291,20 @@
 
     <div class="container" id="container">
         <nav>
-            <div class="navlogo"><i class="fa-solid fa-code"></i></div>       
+            <div class="navlogo"><a href="#container"><i class="fa-solid fa-code"></i></a></div>       
             <div class="navbar">
                 <ul class="navul">
-                    <li><a class="menu1" href="#container">main</a></li>
-                    <li><a class="menu1" href="#aboutprofile">about</a></li>
-                    <li><a class="menu1" href="#worksstatus">works</a></li>
-                    <li><a class="menu1" href="#contactstatus">contact</a></li>
+                    <li><a class="menu1" href="#container"><span class="navcap">M</span>ain</a></li>
+                    <li><a class="menu1" href="#aboutprofile"><span class="navcap">A</span>bout</a></li>
+                    <li><a class="menu1" href="#worksstatus"><span class="navcap">W</span>orks</a></li>
+                    <li><a class="menu2" href="#contactstatus"><span class="navcap">C</span>ontact</a></li>
                 </ul>
             </div>
         </nav>
 
 
         <div class="introduce" id="introduce">
-            <p class="introducement1">안녕하세요</p>
+            <p class="introducement1">🐭 안녕하세요!</p>
             <p class="introducement2">이형철 입니다</p>
             <p class="introduce-content">하나하나 차근차근 배워가는 개발자 지망생</p>
         </div>
@@ -302,7 +336,7 @@
 
         <div class="worksstatus" id="worksstatus">
             <div class="worksbutton">
-                <a href="#"><button class="portfoliobutton" type="button">네이버</button></a>
+                <a href="#worksstatus"><button class="portfoliobutton" type="button">네이버</button></a>
                 <button class="portfoliobutton" type="button">Button</button>
                 <button class="portfoliobutton" type="button">Button</button>
             </div>
@@ -331,8 +365,11 @@
         </div>
 
         <div class="contactstatus" id="contactstatus">
-            <p>연락처 : 010 . 7121 . 6870</p>
-            <p>이메일 : ddochiisrich@gmail.com</p>
+            <div class="contactarea"></div>
+            <div class="contactstatusText">
+                <p>연락처 : 010 . 7121 . 6870</p>
+                <p>이메일 : ddochiisrich@gmail.com</p>
+            </div>
         </div>
     </div>
 </body>
