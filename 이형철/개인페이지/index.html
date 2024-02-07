@@ -274,97 +274,82 @@
         .contactstatus{
             width: 100%;
             height: 800px;
-            border: 1px solid;
+            /* border: 1px solid; */
         }
 
         .contactarea{
+            width: 100%;
             height: 800px;
-            display: flex;
+            display: inline-block;
             text-align: center;
-            justify-content: center;
-            align-items: flex-end;
+            /* border: 1px solid; */
+            /* padding-top: 50px; */
         }
 
-        .contactPhone{
+        .contactPhoneImg, .contactMailImg, .contactKakaoImg, .contactGithubImg{
+            width: 70px;
             /* border: 1px solid; */
-            width: 200px;
-            height: 200px;
+            /* margin: 20px; */
         }
-        #contactPhone:hover{
-            transform: matrix(1.5, 0, 0, 1.5, 300, -300);
+        .contactPhone, .contactMail, .contactKakao, .contactGithub{
+            width: 100%;
+            margin: 50px 0px;
+            text-align: center;
+            /* border: 1px solid; */
+        }
+        .contactPhone:hover{
+            transform: scale(1.5);
             transition: 1s;
         }
-        .contactPhoneText{
-            display: none;
+        .contactMail:hover{
+            transform: scale(1.5);
+            transition: 1s;
         }
-        .contactPhone:hover .contactPhoneText{
-            display: block;
+        .contactKakao:hover{
+            transform: scale(1.5);
+            transition: 1s;
         }
-        .contactPhone img{
-            width: 70px;
+        .contactGithub:hover{
+            transform: scale(1.5);
+            transition: 1s;
         }
 
-        .contactMail{
-            /* border: 1px solid; */
-            width: 200px;
-            height: 200px;
+
+
+        .contactPhoneLink:link{
+            color: black;
+            text-decoration: none;
         }
-        #contactMail:hover{
-            transform: matrix(1.5, 0, 0, 1.5, 100, -300);
-            transition: 1s;
+        .contactPhoneLink:visited{
+            color: black;
         }
-        .contactMailText{
-            display: none;
+        .contactMailLink:link{
+            color: black;
+            text-decoration: none;
         }
-        .contactMail:hover .contactMailText{
-            display: block;
+        .contactMailLink:visited{
+            color: black;
         }
-        .contactMail img{
-            width: 70px;
+        .contactKakaoLink:link{
+            color: black;
+            text-decoration: none;
+        }
+        .contactKakaoLink:visited{
+            color: black;
+        }
+        .contactGithubLink:link{
+            color: black;
+            text-decoration: none;
+        }
+        .contactGithubLink:visited{
+            color: black;
         }
 
-        .contactKakao{
-            /* border: 1px solid; */
-            width: 200px;
-            height: 200px;
-        }
-        #contactKakao:hover{
-            transform: matrix(1.5, 0, 0, 1.5, -100, -300);
-            transition: 1s;
-        }
-        .contactKakaoText{
-            display: none;
-        }
-        .contactKakao:hover .contactKakaoText{
-            display: block;
-        }
-        .contactKakao img{
-            width: 70px;
-        }
-
-        .contactGithub{
-            /* border: 1px solid; */
-            width: 200px;
-            height: 200px;
-        }
-        #contactGithub:hover{
-            transform: matrix(1.5, 0, 0, 1.5, -300, -300);
-            transition: 1s;
-        }
-        .contactGithubText{
-            display: none;
-        }
-        .contactGithub:hover .contactGithubText{
-            display: block;
-        }
-        .contactGithub img{
-            width: 70px;
-        }
     </style>
 
 </head>
 <body>
-    <a class="topButton" id="topButton" href="#container"><img src="./images/swipe.png" title="위로가기"></a>
+    <a class="topButton" id="topButton" href="#container"><img src="main_images/swipe.png" title="위로가기"></a>
 
 
     <div class="container" id="container">
@@ -390,7 +375,7 @@
 
         <div class="aboutprofile" id="aboutprofile">
             <div class="profileimg">
-                <img src="./images/robot-8449206_1280.jpg" width="150px">
+                <img src="main_images/robot-8449206_1280.jpg" width="150px">
             </div>    
             <div class="profileTextArea" >
             <div class="profilestatus">
@@ -426,15 +411,15 @@
 
                     <div class="workcontent2">
                         <h4>맡은내용 : 홈페이지 메인 캘린더위젯, 메모위젯, 메모창, 요일별 웹툰리스트</h4>
-                        <p><a href="https://hijunho0811.github.io/naver.html" target="_blank"><img src="./images/link_icon.png" alt="" width="40px"></a></p>
+                        <p><a href="naver/naver.html" target="_blank"><img src="main_images/link_icon.png" alt="" width="40px"></a></p>
                     </div>
 
                     <div class="workscontent3" id="workscontent3">
                         <ul class="workscontentnaver">
-                            <li><img src="./images/naver.png" alt="" width="500px" height="400px"></li>
-                            <li><img src="./images/naver_01.png" alt="" width="500px" height="400px"></li>
-                            <li><img src="./images/naver_02.png" alt="" width="500px" height="400px"></li>
-                            <li><img src="./images/naver_03.png" alt="" width="500px" height="400px"></li>
+                            <li><img src="main_images/naver.png" alt="" width="500px" height="400px"></li>
+                            <li><img src="main_images/naver_01.png" alt="" width="500px" height="400px"></li>
+                            <li><img src="main_images/naver_02.png" alt="" width="500px" height="400px"></li>
+                            <li><img src="main_images/naver_03.png" alt="" width="500px" height="400px"></li>
                         </ul>
                     </div>
                 </div>
@@ -444,25 +429,30 @@
 
         <div class="contactstatus" id="contactstatus">
             <div class="contactarea">
+                <h1>Contact me</h1>
             <div class="contactPhone" id="contactPhone">
-                <img src="./images/phone-icon.png">
-                <p class="contactPhoneText">010 . 7121 . 6870</p>
+                <a href="tel:010-7121-6870" class="contactPhoneLink"><img class="contactPhoneImg" id="contactPhoneImg" src="main_images/Phone-icon.png" alt="">
+                <p class="contactPhoneText">010 . 7121 . 6870</p></a>
             </div>
+
             <div class="contactMail" id="contactMail">
-                <img src="./images/email-icon.png">
-                <p class="contactMailText">ddochiisrich@gmail.com</p>
+                <a href="mailto:ddochiisrich@gmail.com" class="contactMailLink"><img class="contactMailImg" id="contactMailImg" src="main_images/email-icon.png" alt="">
+                <p class="contactMailText">ddochiisrich@gmail.com</p></a>
             </div>
+
             <div class="contactKakao" id="contactKakao">
-                <img src="./images/kakao-icon.png">
-                <p class="contactKakaoText">totodscp</p>
+                <a href="https://open.kakao.com/o/sKCvhr8f" target="_blank" class="contactKakaoLink"><img class="contactKakaoImg" id="contactKakaoImg" src="main_images/kakao-icon.png" alt="">
+                <p class="contactKakaoText">ID : totodscp</p></a>
             </div>
+
             <div class="contactGithub" id="contactGithub">
-                <img src="./images/github-icon.png">
-                <p class="contactGithubText">https://github.com/ddochiisrich/ddochi</p>
+                <a href="https://github.com/ddochiisrich/ddochi" target="_blank" class="contactGithubLink"><img class="contactGithubImg" id="contactGithubImg" src="main_images/github-icon.png" alt="">
+                <p class="contactGithubText">https://github.com/ddochiisrich/ddochi</p></a>
             </div>
             </div>
         </div>
     </div>
+
 </body>
 
 
