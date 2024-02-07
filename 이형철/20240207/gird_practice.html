@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid_practice</title>
+</head>
+<style>
+    .parents{
+        width: 700px;
+        height: 1000px;
+
+        display: grid;
+        border: 1px solid blue;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 120px);
+
+        grid-gap: 20px;
+        padding: 5px;
+
+        grid-template-areas: 
+            "box1 box1 box2"
+            "box3 box4 box2"
+            "box5 box4 box6"
+            "box5 box7 box7"
+        ;
+    }
+    
+    .box{
+        border: 1px solid red;
+    }
+
+    .box1{
+        grid-area: box1;
+        background-image: url(./images/crafts.jpg);
+    }
+    .box2{
+        grid-area: box2;
+        background-image: url(./images/crafts.jpg);
+    }
+    .box3{
+        grid-area: box3;
+        background-image: url(./images/crafts.jpg);
+    }
+    .box4{
+        grid-area: box4;
+        background-image: url(./images/crafts.jpg);
+    }
+    .box5{
+        grid-area: box5;
+        background-image: url(./images/crafts.jpg);
+    }
+    .box6{
+        grid-area: box6;
+        background-image: url(./images/crafts.jpg);
+    }
+    .box7{
+        grid-area: box7;
+        background-image: url(./images/crafts.jpg);
+    }
+</style>
+<body>
+    <div class="parents">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+        <div class="box box7"></div>
+    </div>
+</body>
+</html>

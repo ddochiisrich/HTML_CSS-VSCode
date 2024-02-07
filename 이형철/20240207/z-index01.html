@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>z-index</title>
+    <style>
+      .pink-box {
+        background-color: pink;
+        border: 5px dashed hotpink;
+        width: 500px;
+        height: 300px;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        z-index: -1;
+      }
+      .blue-box {
+        background-color: lightblue;
+        border: 5px dashed blue;
+        width: 400px;
+        height: 150px;
+        position: relative;
+      }
+      .green-box {
+        background-color: lightgreen;
+        border: 5px dashed green;
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        right: 270px;
+        top: 20px;
+        z-index: 3;
+      }
+
+      .p{
+        width: 500px;
+        border: solid red;
+        position: relative;
+        /* z-index: -5; */
+      }
+    </style>
+  </head>
+  <body>
+    <h3>z-index</h3>
+    <div class="p">
+      <p>
+        position 속성 relative, absolute, fixed, sticky인 요소는 HTML 문서
+        상에서 나중에 나오는 요소가 먼저 나오는 원소 위로 올라가 겹친다. <br />
+        어떤 요소가 다른 요소의 앞이나 뒤에 배치될 수 있도록 z-index를 넣는다.
+        양수 또는 음수를 가질 수 있고 숫자가 작을수록 뒤(아래)로 간다.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="pink-box">첫 번째</div>
+      <div class="blue-box">두 번째</div>
+      <div class="green-box">세 번째</div>
+    </div>
+  </body>
+</html>
