@@ -1,0 +1,154 @@
+<html>
+  <head></head>
+  <body>
+    <style>
+      h2 {
+        color: red;
+      }
+      .highlight {
+        border: solid;
+      }
+      #profile {
+        border: solid blue;
+      }
+      /* 파일04번 변경부분 그리드 적용 */
+      .thumbnail_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .thumbnail{
+        width: 100%;
+      }
+
+      /* 게시물, 팔로워, 팔로우 */
+      #stat_bar{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      /* 프로필 사진 */
+      .circle_pic{
+        border: solid white 1px;
+        border-radius: 50%;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        /* 
+        fill 미디어를 부모 요소에 꽉 들어맞게 채움. 찌그러짐 <책 215p>
+        contain 미디어의 비율을 유지한 채, 부모 요소 밖으로 튀어 나가지 않도록 크기 축소
+        cover 미디어 일부 부모 요소 밖으로 삐져나가더라도 비율유지 꽉 들어맞게 
+        */
+      }
+      #profile_pic{
+        width: 50px;
+        height: 50px;
+      }
+      #highlight_pic{
+        width: 35px;
+        height: 35px;
+
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* 파일05 하이라이트 영역 221p */
+      #highlight_area{
+        display: grid;
+        grid-template-columns: 45px 45px 1fr;
+      }
+      .highlight{
+        text-align: center;
+      }
+    </style>
+    <div>
+      <img
+        src="https://cdn.icon-icons.com/icons2/2699/PNG/512/instagram_logo_icon_170643.png"
+        alt=""
+        width="100px"
+      />
+      <input type="search" value="검색" />
+    </div>
+
+    <div id="profile">
+      <img src="../20240126/images/또치.jpg" alt="프로필사진" class="circle_pic" id="profile_pic"/>
+
+      <div>
+        <h2>ddochiisrich<br /></h2>
+        <button>프로필편집</button>
+      </div>
+    </div>
+
+    <p>
+      <strong>이형철 (HyeongCheol Lee)<br /> </strong>
+      작가<br />
+    </p>
+    <p>
+      <a href="https://github.com/ddochiisrich/ddochi" target="_blank"
+        >https://github.com/ddochiisrich/ddochi</a
+      >
+    </p>
+
+      <!-- 하이라이트 영역 -->
+    <div id="highlight_area">
+      <div class="highlight">
+        <div>
+          <img src="../20240126/images/모코코1.jpg" class="circle_pic" id="highlight_pic" />
+        </div>
+        <div>😎</div>
+      </div>
+
+      <div class="highlight">
+        <div>
+          <img src="../20240126/images/모코코2.jpg" class="circle_pic" id="highlight_pic" />
+        </div>
+        <div>🥰</div>
+      </div>
+    </div>
+
+    <div id="stat_bar">
+      <div class="stat">
+        게시물<br />
+        133
+      </div>
+      <div class="stat">
+        팔로워<br />
+        408
+      </div>
+      <div class="stat">
+        팔로우<br />
+        189
+      </div>
+    </div>
+
+    <div>아이콘이 들어갈 자리</div>
+    <div>
+      게시물 썸네일이 들어갈 자리 <br />
+      <!-- 같은 내용 한꺼번에 수정 shift + ctrl + l -->
+    <div class="thumbnail_grid">
+      <img src="../20240126/images/루피.jpg" class="thumbnail" />
+      <img src="../20240126/images/루피.jpg" class="thumbnail" />
+      <img src="../20240126/images/루피.jpg" class="thumbnail" />
+    </div>
+    <div class="thumbnail_grid">
+      <img src="../20240126/images/루피.jpg" class="thumbnail" />
+      <img src="../20240126/images/루피.jpg" class="thumbnail" />
+      <img src="../20240126/images/루피.jpg" class="thumbnail" />
+    </div>
+    <div class="thumbnail_grid">  
+      <img src="../20240126/images/루피.jpg" class="thumbnail" />
+      <img src="../20240126/images/루피.jpg" class="thumbnail" />
+      <img src="../20240126/images/루피.jpg" class="thumbnail" />
+    </div>
+    </div>
+  </body>
+</html>
+
+<!-- 150 153 156 206 -->
+<!-- 파일05 하이라이트영역 그리드 지정 (책 218p) -->
