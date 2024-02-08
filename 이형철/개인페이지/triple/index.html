@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 나를 아는 여행 앱, 트리플 </title>
+    <style>
+        body{
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        .mainpage{
+            width: 1200;
+            /* margin: 0; */
+        }
+        .nav_firbanner{
+            background: url(https://triple.guide/intro/images/img-01-bg.png) no-repeat;
+            background-size: 100% 100%;
+            height: 800px;
+
+        }
+        /* nav */
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid; */
+            align-items: center;
+        }
+        .logoimg img{
+            width: 77px;
+            margin: 80px 150px 70px 150px;
+            color: white;
+        }
+        .navmenu{
+            display: flex;
+            margin: 80px 150px 70px 150px;
+            color: white;
+        }
+        .navmenu a{
+            color: white;
+            text-decoration: none;
+        }
+        .booking{
+            margin-left: 30px;
+        }
+
+        /* 1st banner */
+        .firbanner{
+            display: flex;
+            justify-content: center;
+        }
+        .bannertextmain{
+            font-size: 90px;
+            font-weight: bold;
+            color: white;
+        }
+        .bannertextsub{
+            font-size: 28px;
+            color: white;
+            margin: 20px 0px;
+        }
+        .bannerphone{
+            margin-left: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.116);
+        }
+        .bannerphone:hover{
+            transform: scale(1.1);
+            transition: 1s;
+        }
+        .bannerinstallbutton{
+            width: 180px;
+            height: 50px;
+            margin-top: 20px;
+
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 40px;
+
+            font-weight: bold;
+            color: white;
+            font-size: 17px;
+        }
+        .bannerinstallbutton a{
+            color: white;
+            text-decoration: none;
+        }
+
+        /* 2st banner */
+        .secbanner{
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            padding: 100px 0;
+            
+            /* border: 1px solid; */
+
+        }
+        .awardimg span{
+            position: absolute;
+            margin-top: -60px;
+            margin-left: 145px;
+
+            font-size: 15px;
+            color: gray;
+        }
+        .awardimg img{
+            width: 400px;
+            height: 338px;
+            text-align: center;
+        }
+        .awardtext{
+            margin-left: 250px;
+        }
+        .awardtext p{
+            font-size: 36px;
+            color: rgb(58, 58, 58);
+        }
+        .awardicon{
+            display: flex;
+            align-items: center;
+            margin-top: 60px;
+        }
+        .googleicon{
+            display: flex;
+            align-items: center;
+            color: rgb(58, 58, 58);
+        }
+        .googleicon img{
+            width: 54px;
+            height: 54px;
+            margin-right: 5px;
+        }
+        .appleicon{
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+            color: rgb(58, 58, 58);
+        }
+        .appleicon img{
+            width: 54px;
+            height: 54px;
+            margin-right: 5px;
+        }
+        /* 첫번째 섹션 */
+        .firsection{
+            height: 965px;
+            background-color: rgb(250, 250, 250);            
+            text-align: center;
+            padding-top: 100px;
+            overflow: hidden;
+        }
+        .firsection p{
+            font-size: 58px;
+            color: rgb(58, 58, 58);
+        }
+        .firsection span{
+            font-size: 17px;
+            color: rgb(58, 58, 58);
+        }
+        .firsectionimg{
+            display: flex;
+            justify-content: center;
+        }
+        .firsectionimg img{
+            width: 262px;
+            height: 570px;
+            margin: 100px 30px 0;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.116);
+        }
+        .firsectionimg img:hover{
+            transform: scale(1.2);
+            transition: 1s;
+        }
+/*  */
+        .secsection{
+            height: 965px;
+            background-color: rgb(250, 250, 250);            
+            text-align: center;
+            padding-top: 100px;
+            overflow: hidden;
+        }
+        .secsection p{
+            font-size: 58px;
+            color: rgb(58, 58, 58);
+        }
+        .secsection span{
+            font-size: 17px;
+            color: rgb(58, 58, 58);
+        }
+        .secsectionimg{
+            display: flex;
+            justify-content: center;
+        }
+        .secsectionimg img{
+            width: 202px;
+            height: 437px;
+            margin: 100px 30px 0;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.116);
+        }
+        .secsectionimg img:hover{
+            transform: scale(1.2);
+            transition: 1s;
+        }
+/*  */
+        .thdsection{
+            height: 800px;
+            background-color: white;            
+            padding-top: 160px;
+            overflow: hidden;
+            justify-content: center;
+            /* border: 1px solid; */
+        }
+        .thdsection p{
+            font-size: 52px;
+            color: rgb(58, 58, 58);
+        }
+        .thdsection span{
+            font-size: 17px;
+            color: rgb(58, 58, 58);
+        }
+        .thdsection{
+            display: flex;
+        }
+        .thdsectionimg img{
+            width: 262px;
+            height: 570px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.116);
+        }
+        .thdsectionimg1{
+            position: relative;
+            left: 200px;
+            top: 10px;
+        }
+        .thdsectionimg2{
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+        .thdsectionimg:hover{
+            transform: scale(1.1);
+            transition: 1s;
+        }
+/*  */
+
+        .foursection{
+            height: 810px;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            background-color: rgb(250, 250, 250);     
+            padding-top: 150px;       
+
+        }
+        .foursection img{
+            width: 290px;
+            box-shadow: rgba(0, 0, 0, 0.18) 0px 24px 38px 0px;
+            border-radius: 20px;
+        }
+        .foursectiontext{
+            margin: 30px;            
+    
+        }
+        .foursectiontext p{
+            font-size: 52px;
+            color: rgb(57, 57, 57);
+        }
+        .foursectiontext span{
+            font-size: 17px;
+            color: rgb(57, 57, 57);
+        }
+        .foursectionpic1{
+            width: 300px;
+            display: block;
+            margin: 30px 10px 30px 30px;     
+            
+            position: relative;
+            top: 140px;
+            
+        }
+        .foursectionpic2{
+            width: 300px;
+            display: block;
+        }
+        .foursectionpic1:hover{
+            transform: scale(1.1);
+            transition: 1s;
+        }
+        .foursectionpic2:hover{
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+/*  */
+        .fivsection{
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            background-color: white;
+            position: relative;
+            padding: 100px;
+        }
+        .fivsectionhead{
+            width: 1040px;
+            height: 900px;
+        }
+        .fivsectiontext p{
+            font-size: 52px;
+            color: rgb(58, 58, 58);
+        }
+        .fivsectiontext span{
+            font-size: 17px;
+            color: 58px;
+        }
+
+        .sec5-1{
+            width: 160px;
+            height: 160px;
+            position: relative;
+            top: -180px;
+            left: 480px;
+        }
+        .sec5-2{
+            width: 140px;
+            height: 140px;
+            position: relative;
+            top: -370px;
+            left: 480px;
+
+        }
+        .sec5-3{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: -340px;
+            left: 520px;
+
+        }       
+        .sec5-4{
+            width: 150px;
+            height: 150px;
+            position: relative;
+            top: -370px;
+            left: 570px;
+
+        }       
+        .sec5-5{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: -150px;
+
+            
+        }       
+        .sec5-6{
+            width: 220px;
+            height: 220px;
+            position: relative;
+
+        }       
+        .sec5-7{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+
+        }       
+        .sec5-8{
+            width: 130px;
+            height: 130px;
+            position: absolute;
+
+        }       
+        .sec5-9{
+            width: 170px;
+            height: 170px;
+            position: absolute;
+
+        }       
+        .sec5-10{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+
+        }       
+        .sec5-11{
+            width: 170px;
+            height: 170px;
+            position: absolute;
+
+        }       
+        .sec5-12{
+            width: 120px;
+            height: 120px;
+            position: absolute;
+
+        }       
+
+    </style>
+</head>
+<body>
+    <div class="mainpage">
+        <div class="nav_firbanner">
+            <!-- 네브바 -->
+            <div class="nav">
+            <div class="logoimg">
+                <a href="#"><img src="https://triple.guide/intro/images/img-main-logo-white@3x.png"></a>
+            </div>
+            <div class="navmenu">
+                <div class="navtop"><a href="#">TOP 여행지</a></div>
+                <div class="booking"><a href="#">내 예약</a></div>
+            </div>
+            </div>
+            <!-- 첫번째 베너 -->
+            <div class="firbanner">
+            <div class="bannertext">
+                <div class="bannertextmain">나를 아는 여행앱 <br> 트리플</div>
+                <div class="bannertextsub">예약부터 일정까지 여행이 더 쉬워집니다.</div>
+                <button class="bannerinstallbutton"><a href="#">앱 설치하기</a></button>
+            </div>
+            <img class="bannerphone" src="https://triple.guide/intro/images/img_01_screen_3_520@3x.png" width="300px" height="650px">
+            </div>
+            <!-- 두번째 베너 -->
+            <div class="secbanner">
+                <div class="awardimg">
+                    <img src="https://triple.guide/intro/images/img-02-triple@3x.png"><br>
+                    <span>2022년 12월 기준</span>
+                </div>
+                <div class="awardtext">
+                    <p><b>780만 명</b>의 여행자</p>
+                    <p><b>110만 개</b>의 여행리뷰</p>
+                    <p><b>590만 개</b>의 여행일정</p>
+                    <div class="awardicon">
+                        <div class="googleicon">
+                            <img src="https://triple.guide/intro/images/img-02-badge-google@3x.png">
+                            2018구글 플레이스토어 <br> 올해의 앱 최우수상 수상
+                        </div>
+                        <div class="appleicon">
+                            <img src="https://triple.guide/intro/images/img-02-badge-apple@4x.png">
+                            2018 애플 앱스토어 <br> 오늘의 여행앱 선정
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 첫번째 색션 -->
+            <div class="firsection">
+                <p>여행에 필요한 모든 것, <br>한번에 예약하세요</p>
+                <span>항공부터 숙소, 투어, 티켓까지 <br>예약 할수록 따라오는 추가 할인 혜택도 함게 누리세요.</span>
+                <div class="firsectionimg">
+                    <img class src="https://triple.guide/intro/images/img_07_screen_0@4x.png">
+                    <img class src="https://triple.guide/intro/images/img_07_screen_1@4x.png">
+                    <img class src="https://triple.guide/intro/images/img_07_screen_2@4x.png">
+                </div>
+            </div>
+            <div class="secsection">
+                <p>해외여행<br>최적의 경로로 이동해요</p>
+                <span>동행인과 함께 일정 지도를 짜고<br>최적 동선을 안내받으세요.</span>
+                <div class="secsectionimg">
+                    <img class src="https://triple.guide/intro/images/img_04_screen_2@4x.png">
+                    <img class src="https://triple.guide/intro/images/img_04_screen_1@4x.png">
+                    <img class src="https://triple.guide/intro/images/img_04_screen_3@4x.png">
+                </div>
+            </div>
+            <div class="thdsection">
+                <div class="thdsectiontext">
+                    <p>어려운<br>해외여행 경비<br>함께 관리해요</p>
+                    <span>해외여행 경비를 동행인과 함께 </span><br><span>간편하게 관리하세요.</span>
+                </div>
+                <div class="thdsectionimg">
+                    <img class="thdsectionimg1" src="https://triple.guide/intro/images/img_05_screen_1@4x.png">
+                    <img class="thdsectionimg2" src="https://triple.guide/intro/images/img_05_screen_2@4x.png">
+                </div>
+            </div>
+            <div class="foursection">
+                <div class="foursectiontext">
+                    <p>여행기와 리뷰를<br>활용하세요.</p>
+                    <span>먼저 다녀온 여행자의 리얼한 여행기와 리뷰에서<br>
+                            숨은 정보와 꿀팁을 확인하세요. <br>
+                            마음에 드는 일정은 내 일정에 담을 수 있어요.</span>
+                </div>
+                <div class="foursectionpic1">
+                    <img class="foursectionpic1-1" src="https://triple.guide/intro/images/img_08_review_1@4x.png">
+                    <img class="foursectionpic1-2" src="https://triple.guide/intro/images/img_08_review_2@4x.png">
+                    <img class="foursectionpic1-3" src="https://triple.guide/intro/images/img_08_review_3@4x.png">
+                </div>
+                <div class="foursectionpic2">
+                    <img class="foursectionpic2-1" src="https://triple.guide/intro/images/img_99_rounge_A_01_detail@4x.png">
+                    <img class="foursectionpic2-2" src="https://triple.guide/intro/images/img_99_rounge_B_01_detail@4x.png">
+                </div>
+            </div>
+            <div class="fivsection">
+                <div class="fivsectionhead">
+                    <div class="fivsectiontext">
+                        <p>전 세계 <br>최신 여행 정보를 <br>모두 모았어요</p>
+                        <span>가장 최신의 도시별 가이드로 <br>안심할 수 잇는 여행을 계획하세요.</span>
+                    </div>
+                    <div class="fivsectionimg">
+                        <img class="sec5-1" src="https://triple.guide/intro/images/img_99_guam@4x.png">
+                        <img class="sec5-2" src="https://triple.guide/intro/images/img_99_singapore@4x.png">
+                        <img class="sec5-3" src="https://triple.guide/intro/images/img_99_danang@4x.png">
+                        <img class="sec5-4" src="https://triple.guide/intro/images/img_99_taipei@4x.png">
+                        <img class="sec5-5" src="https://triple.guide/intro/images/img_99_tokyo@4x.png">
+                        <img class="sec5-6" src="https://triple.guide/intro/images/img_99_bangkok@4x.png">
+                        <img class="sec5-7" src="https://triple.guide/intro/images/img_03_osaka@4x.png">
+                        <img class="sec5-8" src="https://triple.guide/intro/images/img_99_london@4x.png">
+                        <img class="sec5-9" src="https://triple.guide/intro/images/img_99_paris@4x.png">
+                        <img class="sec5-10" src="https://triple.guide/intro/images/img_99_jeju@4x.png">
+                        <img class="sec5-11" src="https://triple.guide/intro/images/img_03_busan@4x.png">
+                        <img class="sec5-12" src="https://triple.guide/intro/images/img_03_gangwon@4x.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
