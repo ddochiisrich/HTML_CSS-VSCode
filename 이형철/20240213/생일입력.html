@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // var (variable) 변수 선언할 때 사용한다.
+    // let 에크마6버전 (2015년)
+    // const 상수 : 변하지 않는 상수를 입력받을 때 사용
+
+    const currentYear = 2024;
+    let birthYear;
+    let age;
+    let name;
+
+    name = prompt("이름을 입력하세요.", " ");
+    birthYear = prompt("태어난 연도를 입력하세요. (YYYY)", " ");
+    age = currentYear - birthYear; //현재 나이
+    document.write(currentYear + "년 현재<br>");
+    document.write(name + "님, " + birthYear + "년에 태어난 사람의 나이는" + age + "세 입니다.");
+
+  </script>
+</body>
+</html>

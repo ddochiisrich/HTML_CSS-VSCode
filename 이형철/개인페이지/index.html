@@ -21,6 +21,7 @@
 
         .topButton{
             position: fixed;
+            z-index: 1;
             bottom: 5%;
             right: 5%;
         }
@@ -44,7 +45,7 @@
         /* nav */
         nav{
             background-color: rgb(253, 250, 241);
-            z-index: 1;
+            z-index: 2;
             width: 100%;
             height: 100px;
             position: fixed;
@@ -198,7 +199,7 @@
             justify-content: center;
 
         }
-        .portfoliobutton{
+        .worksbutton button{
             background-color: rgb(230, 227, 218);
             box-shadow: 1px 4px 0 rgb(0,0,0,0.5);
             border-radius: 5px;
@@ -208,17 +209,26 @@
             cursor: pointer;
 
         }
-        .portfoliobutton:active{
+        .worksbutton button:active{
             box-shadow: 1px 1px 0 rgb(0, 0, 0, 0.5);
             position: relative;
             top: 2px;
         }
         .worksimg{
+            display: flex;
+
+            text-align: center;
+            padding: 0;
+            margin: 0 auto;
+
+            justify-content: center;
+        }
+        .worksimgtriple{
             text-align: center;
         }
         .worksimgnaver{
-            width: 100%;
-            margin: 0px;
+            margin-right: 30px;
+            padding: 0px;
 
         }
         .works-naver{
@@ -231,6 +241,11 @@
             justify-content: center;
         }
         .mainsentence{
+            font-size: 30px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .triplemainsentence{
             font-size: 30px;
             font-weight: bold;
             margin-right: 20px;
@@ -271,6 +286,45 @@
             75%{left: -1500px;}
             100%{left: 0px;}
         }
+
+        .workscontent4{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid; */
+        }
+
+        #workscontent6{
+
+            width: 500px;
+            height: 400px;
+            overflow: hidden;
+            /* border: 1px solid red; */
+            box-shadow: 0 0 20px lightgray;
+            margin: 0 auto;
+
+        }
+        .workscontenttriple{
+
+            width: 300px;
+            height: 150px;
+            display: flex;
+            padding-left: 0;
+            margin-left: 0;
+            list-style: none;
+            position: relative;
+            animation: slideAni 20s infinite ease ;
+        }
+        .workscontenttriple li{
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .worksimg{
+            display: flex;
+        }
+
         /* contact */
         .contactstatus{
             width: 100%;
@@ -282,9 +336,18 @@
             width: 100%;
             height: 800px;
             display: inline-block;
+
+            margin: 0 auto;
+
+            /* justify-content: center; */
+            /* align-items: center; */
             text-align: center;
-            /* border: 1px solid; */
+            border: 1px solid;
             /* padding-top: 50px; */
+        }
+
+        .contactarea h1{
+            margin-bottom: 100px;
         }
 
         .contactPhoneImg, .contactMailImg, .contactKakaoImg, .contactGithubImg{
@@ -293,10 +356,10 @@
             /* margin: 20px; */
         }
         .contactPhone, .contactMail, .contactKakao, .contactGithub{
-            width: 100%;
-            margin: 50px 0px;
+            width: 300px;
+            margin: 10px auto;
             text-align: center;
-            /* border: 1px solid; */
+            border: 1px solid;
         }
         .contactPhone:hover{
             transform: scale(1.5);
@@ -400,8 +463,8 @@
 
         <div class="worksstatus" id="worksstatus">
             <div class="worksbutton">
-                <a href="#worksstatus"><button class="portfoliobutton" type="button">네이버</button></a>
-                <a href="./triple/index.html"><button class="portfoliobutton" type="button">트리플</button></a>
+                <button class="portfoliobuttonnaver" type="button">네이버</button>
+                <button class="portfoliobuttontriple" type="button">트리플</button>
                 <button class="portfoliobutton" type="button">Button</button>
             </div>
             <div class="worksimg">
@@ -422,6 +485,27 @@
                             <li><img src="main_images/naver_02.png" alt="" width="500px" height="400px"></li>
                             <li><img src="main_images/naver_03.png" alt="" width="500px" height="400px"></li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="worksimgtriple">
+                    <div class="workscontent4">
+                        <span class="triplemainsentence">트리플</span><span class="triplesubsentence">(1차 개인과제)</span>
+                    </div>
+
+                    <div class="workscontent5">
+                        <h4>맡은내용 : 전체</h4>
+                        <p><a href="triple/index.html" target="_blank"><img src="main_images/link_icon.png" alt="" width="40px"></a></p>
+                    </div>
+
+                    <div class="workscontent6" id="workscontent6">
+                        <ul class="workscontenttriple">
+                            <li><img src="./triple/images/triple01.png" width="500px" height="400px"></li>
+                            <li><img src="./triple/images/triple02.png" width="500px" height="400px"></li>
+                            <li><img src="./triple/images/triple03.png" width="500px" height="400px"></li>
+                            <li><img src="./triple/images/triple04.png" width="500px" height="400px"></li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
