@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 이벤트</title>
+</head>
+
+<style>
+  .itemmain{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .itemmain img{
+    box-shadow: 3px 3px 3px #ccc;
+  }
+  .over{
+    border: 2px solid salmon;
+    border-radius: 3px;
+
+    background-color: white;
+    padding: 5px 10px;
+
+    color: rgb(58, 58, 58);
+
+
+  }
+  .over:hover{
+    border: 2px solid salmon;
+    border-radius: 3px;
+
+    background-color: salmon;
+    padding: 5px 10px;
+    
+    color: white;
+
+    transition: 0.5s;
+  }
+
+</style>
+
+<body>
+  <div id="item">
+    <div class="itemmain">
+      <img src="../20240126/images/루피.jpg" width="250px"> <br>
+      <button class="over" id="open" onclick="showDetail()">상세 설명</button>
+    </div>
+    <!-- 사진에 대한 내용 -->
+  <div id="desc" class="detail" style="display: none;">
+    <h4>잔망 루피 (군침이 싹도노)</h4>
+    <P>암컷 비버 캐릭터. 
+      귀여운 외모에 소심하고 겁이 많고 부끄러움을 타는 면이 있어서 꽁해지는 일이 종종 있지만 <br>
+      포비 못지 않게 겸손하고 따뜻하고 친절하고 마음씨가 착하고 모범적인 성격을 가지고 있다. <br>
+      요리 솜씨는 매우 뛰어나지만 운동에는 서툴러서 놀림받기 일상이다. 요리와 운동이 반비례하는 셈. <br>
+      1기 때만 해도 홍일점이었지만 2기에서 패티와 해리의 등장으로 홍일점은 아니게 되었다.</P> 
+    <button class="over" id="close" onclick="hideDetail()">닫기</button>
+  </div>
+  </div>
+
+  <script>
+    function showDetail(){
+      // 상세 설명 부분을 화면에 표시
+      document.querySelector('#desc').style.display = "block";
+    }
+    function hideDetail(){
+      // 상세 설명 부분을 화면에서 감춤
+      document.querySelector('#desc').style.display = "none";
+    }
+  </script>
+</body>
+</html>
