@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>color change</title>
+
+  <style>
+    body{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      text-align: center;
+
+      background-color: rgb(255, 226, 231);
+
+    }
+    H1{
+      text-align: center;
+      font-size: 100px;
+    }
+    #red{
+      width: 30px;
+      height: 30px;
+
+      background-color: red;
+      border-style: none;
+      cursor: pointer;
+    }
+    #orange{
+      width: 30px;
+      height: 30px;
+
+      background-color: orange;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #yellow{
+      width: 30px;
+      height: 30px;
+
+      background-color: yellow;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #green{
+      width: 30px;
+      height: 30px;
+
+      background-color: green;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #blue{
+      width: 30px;
+      height: 30px;
+
+      background-color: blue;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #brown{
+      width: 30px;
+      height: 30px;
+
+      background-color: brown;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #gray{
+      width: 30px;
+      height: 30px;
+
+      background-color: gray;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #black{
+      width: 30px;
+      height: 30px;
+
+      background-color: black;
+      border-style: none;
+      cursor: pointer;
+
+    }
+  </style>
+
+</head>
+<body>
+  <H1>:)</H1>
+
+  <button id="red"></button>
+  <button id="orange"></button>
+  <button id="yellow"></button>
+  <button id="green"></button>
+  <button id="blue"></button>
+  <button id="brown"></button>
+  <button id="gray"></button>
+  <button id="black"></button>
+
+  <script>
+
+    document.querySelector("#red").onclick = function(){
+      document.querySelector("H1").style.color = "red"
+    }
+    document.querySelector("#orange").onclick = function(){
+      document.querySelector("H1").style.color = "orange"
+    }
+    document.querySelector("#yellow").onclick = function(){
+      document.querySelector("H1").style.color = "yellow"
+    }
+    document.querySelector("#green").onclick = function(){
+      document.querySelector("H1").style.color = "green"
+    }
+    document.querySelector("#blue").onclick = function(){
+      document.querySelector("H1").style.color = "blue"
+    }
+    document.querySelector("#brown").onclick = function(){
+      document.querySelector("H1").style.color = "brown"
+    }
+    document.querySelector("#gray").onclick = function(){
+      document.querySelector("H1").style.color = "gray"
+    }
+    document.querySelector("#black").onclick = function(){
+      document.querySelector("H1").style.color = "black"
+    }
+  </script>
+</body>
+</html>

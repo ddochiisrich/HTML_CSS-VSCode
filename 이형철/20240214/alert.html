@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alert 알림 창 표시</title>
+</head>
+<body>
+  <h2>alert 알림 창 표시</h2>
+  <p> alert 알림 창 표시 내용 내용 내용</p>
+  <img src="../20240126/images/루피.jpg" id="pic">
+
+  <script>
+    //변수 이름 지을 때 맨앞에 올 수 있는 특수문자 _, $, 영문자
+    //숫자가 맨 앞에 올 수 없다.
+    // let $pic = document.querySelector("#pic");
+    let $pic = document.getElementById("pic");
+    
+    $pic.onclick = function(){
+      alert("이미지를 클릭했습니다.")
+    }
+  </script>
+</body>
+</html>
