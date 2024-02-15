@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> plus_minus </title>
+
+  <style>
+    body{
+      text-align: center;
+    }
+    .inText{
+      margin: 50px;
+      font-size: 50px;
+      font-weight: bold;
+    }
+    a{
+      font-size: 30px;
+      text-decoration: none;
+      color: black;
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 10px;
+    }
+
+    #red{
+      width: 30px;
+      height: 30px;
+
+      background-color: red;
+      border-style: none;
+      cursor: pointer;
+    }
+    #orange{
+      width: 30px;
+      height: 30px;
+
+      background-color: orange;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #yellow{
+      width: 30px;
+      height: 30px;
+
+      background-color: yellow;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #green{
+      width: 30px;
+      height: 30px;
+
+      background-color: green;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #blue{
+      width: 30px;
+      height: 30px;
+
+      background-color: blue;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #brown{
+      width: 30px;
+      height: 30px;
+
+      background-color: brown;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #gray{
+      width: 30px;
+      height: 30px;
+
+      background-color: gray;
+      border-style: none;
+      cursor: pointer;
+
+    }
+    #black{
+      width: 30px;
+      height: 30px;
+
+      background-color: black;
+      border-style: none;
+      cursor: pointer;
+
+    }
+  </style>
+</head>
+<body>
+  <a href="#" id="btnPlus">PLUS</a>
+  <a href="#" id="btnMinus">MINUS</a>
+  <div class="inText">0</div>
+
+  <button id="red"></button>
+  <button id="orange"></button>
+  <button id="yellow"></button>
+  <button id="green"></button>
+  <button id="blue"></button>
+  <button id="brown"></button>
+  <button id="gray"></button>
+  <button id="black"></button>
+
+
+  <script>
+
+    //////////////////// +, - //////////////////
+    const $btnPlus = document.getElementById("btnPlus");
+    const $btnMinus = document.getElementById("btnMinus");
+    let $inText = document.querySelector(".inText");
+    let num = 0; // 제어할 숫자를 0으로 초기화
+
+    // btnPlus를 클릭할 때마다 함수
+    $btnPlus.addEventListener("click", e => {
+      e.preventDefault(); // 새로고침 방지
+      num++; //1씩 증가
+      console.log(num);
+      $inText.textContent = num;
+    })
+
+    // btnMinus를 클릭할 때마다 함수
+    $btnMinus.addEventListener("click", e => {
+      e.preventDefault(); // 새로고침 방지
+      num--; // 1씩 감소
+      console.log(num);
+      $inText.textContent = num;
+    })
+
+    //////////////////// 색변경 /////////////////////
+
+    document.querySelector("#red").onclick = function(){
+      document.querySelector(".inText").style.color = "red"
+    }
+    document.querySelector("#orange").onclick = function(){
+      document.querySelector(".inText").style.color = "orange"
+    }
+    document.querySelector("#yellow").onclick = function(){
+      document.querySelector(".inText").style.color = "yellow"
+    }
+    document.querySelector("#green").onclick = function(){
+      document.querySelector(".inText").style.color = "green"
+    }
+    document.querySelector("#blue").onclick = function(){
+      document.querySelector(".inText").style.color = "blue"
+    }
+    document.querySelector("#brown").onclick = function(){
+      document.querySelector(".inText").style.color = "brown"
+    }
+    document.querySelector("#gray").onclick = function(){
+      document.querySelector(".inText").style.color = "gray"
+    }
+    document.querySelector("#black").onclick = function(){
+      document.querySelector(".inText").style.color = "black"
+    }
+  </script>
+</body>
+</html>

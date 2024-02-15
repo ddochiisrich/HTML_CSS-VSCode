@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> innerHTML </title>
+
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+  <style>
+    h2{
+      background-color: yellowgreen;
+    }
+  </style>
+</head>
+<body>
+  <div id="innerH"></div>
+  <div id="innerT"></div>
+
+  <h2>innerHTML을 써봅시다</h2>
+  <button onclick="subway()">Subway버튼</button>
+  <button onclick="bus()">Bus버튼</button>
+
+  <script>
+    function subway(){
+      let name = "subway";
+      let city = "서울대입구역";
+      // console.log(name + city);
+      document.getElementById("innerH").innerHTML=(name+city);
+    }
+
+    function bus(){
+      let number = 1082;
+      let stop = "합정역";
+      // console.log(number+stop);
+      document.getElementById("innerT").innerHTML=(number + " 번 " +stop);
+    }
+  </script>
+</body>
+</html>

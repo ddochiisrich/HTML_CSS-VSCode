@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마우스 이벤트02</title>
+</head>
+<body>
+  <img src="../20240126/images/모코코1.jpg" id="cover">
+
+  <script>
+    // 마우스를 이미지에 올렸을 때 mouseover, dblclick, mouseout
+
+    let cover = document.getElementById("cover");
+
+    cover.addEventListener("dblclick", function(){
+      cover.src = "../20240126/images/모코코2.jpg";
+    })
+
+    // 마우스 이미지 밖으로 mouseout, mouseleave
+    cover.addEventListener("mouseout", function(){
+      cover.src = "../20240126/images/루피.jpg";
+    })
+  </script>
+
+  <!-- 반병헌책 324p -->
+</body>
+</html>

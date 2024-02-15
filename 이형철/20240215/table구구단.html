@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구구단</title>
+
+  <style>
+    table{
+      background-color: rgb(217, 217, 217);
+      border-radius: 5px;
+    }
+    th{
+      border: 1px solid lightgray;
+      background-color: pink;
+      width: 10px;
+      height: 50px;
+      border-radius: 5px;
+    }    
+    td{
+      border: 1px solid lightgray;
+      background-color: lightblue;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>  
+  <script>
+    document.write("<table>");
+    document.write("<thead>");
+    document.write("<tr>");
+      for(let a = 1; a <= 9; a++){
+        document.write("<th>" + a + "단" + "</th>")
+      }
+      document.write("</tr>");
+      document.write("</thead>");
+
+      document.write("<tbody>");
+        for(let b = 1; b <= 9; b++){
+          document.write("<tr>")
+          for(let c = 1; c <= 9; c++){
+            document.write("<td>" + b + "X" + c + "=" + b*c + "</td>");
+        }
+        document.write("</tr>");
+        }
+        document.write("</tbody>");   
+        document.write("</table>"); 
+
+
+
+
+
+
+  </script>
+</body>
+</html>

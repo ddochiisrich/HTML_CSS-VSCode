@@ -7,15 +7,24 @@
 </head>
 <body>
   <script>
-    for(let a = 0; a < 5; a++){
+
+// prompt로 숫자 입력해서 출력하기.
+// 🛑삼각형 별찍기
+
+    let q = Number(prompt("숫자를 입력해주세요."))
+
+    for(let a = 0; a < q; a++){
       for(let b = 0; b <= a; b++){
         document.write("*")
       }
       document.write("<br>")
     }
 
+//////////////////////////////////////// 
 
     document.write("<br>")
+
+// 🛑역삼각형 별찍기
 
 
     for(let c = 0; c < 5; c++){
@@ -25,6 +34,10 @@
       document.write("<br>")
     }
 
+//////////////////////////////////////// 
+
+// 🛑피라미드 별찍기
+
     document.write("<br>")    
 
     for(let e = 0; e < 5; e++){
@@ -32,16 +45,19 @@
 
         document.write("&nbsp");
       }
-      for(let f = 0; f <= e; f++){
-        document.write("*");
-      }
-      for(let f = 1; f <= e; f++){
+      for(let f = 0; f < 2*e+1; f++){
         document.write("*");
       }
       document.write("<br>")
     }
 
+//////////////////////////////////////// 
+
     document.write("<br>")
+
+//////////////////////////////////////// 
+
+// 🛑역피라미드 별찍기
 
     for(let g = 0; g < 5; g++){
       for(let h = 0; h < g; h++){
@@ -57,6 +73,8 @@
       document.write("<br>")
     }
 
+//////////////////////////////////////// 
+    
   </script>
 </body>
 </html>
