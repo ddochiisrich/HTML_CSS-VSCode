@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 전구_if 클릭 </title>
+  <style>
+
+    img{
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h2>What Can JavaScript Do?</h2>
+  <p>😁 if 클릭</p>
+
+  <div class="content">
+  <img src="./images/전구1.png" id="pic">
+
+  <br>
+
+  <button id="onbutton">Turn on the light</button>
+  <button id="offbutton">Turn off the light</button>
+  </div>
+
+
+  <script>
+    let pic = document.getElementById("pic");
+    let onBtn = document.getElementById("onbutton")
+    let offBtn = document.getElementById("offbutton")
+
+  
+    onBtn.addEventListener("click", function(){
+      if(pic.src = "./images/전구1.png") {
+        pic.src = "./images/전구2.png"
+      }
+    })
+
+    offBtn.addEventListener("click", function(){
+      if(pic.src = "./images/전구2.png") {
+        pic.src = "./images/전구1.png"
+      }
+    })
+  </script>
+</body>
+</html>

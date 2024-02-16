@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 전구_이미지 직접클릭 </title>
+  <style>
+
+    img{
+      width: 200px;
+      height: 200px;
+    }
+    #pic2{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>What Can JavaScript Do?</h2>
+  <p>😁 이미지 직접 클릭</p>
+
+  <img src="./images/전구1.png" id="pic">
+
+
+  <script>
+    let pic = document.getElementById("pic");
+
+    pic.addEventListener("click", () => {
+      pic.src = "./images/전구2.png"
+    })
+
+    pic.addEventListener("mouseout", () => {
+      pic.src = "./images/전구1.png"
+    })
+
+
+    
+
+  </script>
+</body>
+</html>

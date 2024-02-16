@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 function</title>
+</head>
+<body>
+  <script>
+    // 😀 익명 함수 : 함수의 이름이 없다.
+    // 함수 선언
+    let add = function(a, b){//매개변수
+      return a + b;
+    }
+    // 함수 실행
+    // 익명 함수 실행 후 결과값을 변수 sum에 할당
+    let sum = add(10, 20);
+
+    // 😀 즉시 실행 함수
+    // 1. 소괄호 위치()
+    let result = (function(){
+      return 11 + 22;
+    }());
+    console.log(result);
+
+    // 2. 소괄호 위치()
+    let result2 = (function(){
+      return 13 + 24;
+    })();
+    console.log(result2);
+
+    // 3. 함수선언을 ()소괄호로 감싸준다.
+    let result3 = (function(a, b){
+      return a+ b;
+    }(44, 34));
+    console.log(result3);
+
+    // 😀 화살표 함수
+    // 익명 함수에서만 쓸 수 있다.
+    // return문 생략된 것으로 간주한다.
+    
+    // const hi = function(){
+    //   return "안녕하세요!";
+    // }();
+    // console.log(hi);
+
+    // 이렇게 화살표 함수로 바꿔쓸 수 있다. 1~2
+
+    //1. const hi1 = () => {return "안녕하세요!"}
+    //   console.log(hi1())
+    //2. const hi2 = () => "안녕하세요!"
+    //   console.log(hi2())
+    const hi3 = (() => "안녕하세요!")();
+    console.log(hi3);
+
+    // 🛑 매개변수가 1개일 때
+
+    let hi = function(user){
+      document.write(user + "님, 안녕하세요!");
+    }
+    hi(); // 함수 실행
+
+    // 🛑 매개변수가 2개일 때
+
+    let sum1 = function(a, b){
+      return a + b;
+    }    
+    console.log(sum1(2,3));
+
+    let sum2 = (a, b) => {return a + b}
+    console.log(sum2(4,5));
+
+    let sum3 = (a, b) => a + b;
+    console.log(sum3(5,6));
+
+  </script>
+</body>
+</html>

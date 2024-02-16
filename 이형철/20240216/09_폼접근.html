@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼접근</title>
+</head>
+<body>
+  <div id="container">
+    <h1>수강신청</h1>
+    <form name="testForm">
+      <fieldset>
+        <legend>신청인</legend>
+        <ul>
+          <li><label class="reg" for="userName">이름</label>
+          <input type="text" name="userName" id="userName" maxlength="50">
+          </li>
+          <li>
+            <label class="reg" for="class">학과</label>
+            <select name="major" id="major">
+              <option>----학과 선택 ----</option>
+              <option value="archi">건축공학과</option>
+              <option value="mechanic">기계공학과</option>
+              <option value="indust">산업공학과</option>
+              <option value="elec">전기전자공학과</option>
+              <option value="computer">컴퓨터공학과</option>
+              <option value="chemical">화학공학과</option>
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+
+  </div>
+
+  <script>
+    // 😇 콘솔에 입력해보기.
+    // document.testForm
+    // 함수를 사용해 선택 목록에 접근하기
+    // document.querySelector("#major").options    
+    const selectMenu = document.querySelector("#major");
+
+    function displaySelect(){
+      // selectedIndex : index값의 순서
+      let selectedText = selectMenu.options[selectMenu.selectedIndex].innerText;
+      alert(`[${selectedText}]`);
+    }
+
+    selectMenu.onchange = displaySelect;
+  </script>
+</body>
+</html>
