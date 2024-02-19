@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALE</title>
+  <style>
+    body{
+      text-align: center;
+    }
+    img{
+      width: 400px;
+    }
+    b{
+      color: red;
+    }
+    li{
+      list-style: none;
+      margin: 10px;
+    }
+    input{
+      text-align: end;
+      border: none;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      margin: 10px;
+      outline: none;
+    }
+    button{
+      border: none;
+      background-color: lightgrey;
+      padding: 5px 12px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contents">
+
+    <img src="images/sale.png">
+
+    <ul>
+      <li>
+        <span>정ㅤ가</span>
+        <input type="text" placeholder="0" autofocus id="firstPrice"> <span>원</span>
+      </li>
+      <li>
+        <span>할인율</span>
+        <input type="text" placeholder="0" id="rate"> <span>%</span>
+      </li>
+    </ul>
+    <button onclick="resultBtn()">할인가 계산</button>
+  </div>
+  <div>
+    <hr>
+    <p>할인가 계산 결과</p>
+    <hr>
+    <div id="result">
+
+    </div>
+  </div>
+
+  <script>
+    function resultBtn(){
+      let originalPrice = document.getElementById("firstPrice").value;
+      let rate = document.getElementById("rate").value;
+      let salePrice = originalPrice * (rate / 100);
+      let totalPrice = originalPrice - salePrice;
+
+      document.querySelector("#result").innerHTML = `할인금액은 <b>${salePrice}</b>원 입니다.` + "<br>" + `할인 적용된 금액은 <b>${totalPrice}</b>원 입니다.`
+
+    }
+  </script>
+</body>
+</html>

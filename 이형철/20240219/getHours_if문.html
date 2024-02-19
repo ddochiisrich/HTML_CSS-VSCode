@@ -36,7 +36,7 @@
     document.querySelector("#result1").innerText = toNow;
     document.querySelector("#result2").innerText = toMin;
 
-    if(toNow <= "12"){
+    if(toNow < "12"){
       (pic.src = "./images/sunset.jpg")
     } else{
       (pic.src = "./images/moon.jpg")

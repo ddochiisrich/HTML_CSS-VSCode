@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전구 2</title>
+  <style>
+    img{
+      width: 250px;
+      height: 220px;
+    }
+  </style>
+</head>
+<body>
+    <p>💡 addEventListener 사용</p>
+
+    <img src="../20240216/images/전구1.png" id="myImage"> <br>
+    <!-- <img src="../20240216/images/전구2.png" > -->
+    <button id="onBtn">켜기</button>
+    <button id="offBtn">끄기</button>
+
+    <script>
+      let $myImage = document.getElementById("myImage");
+      let $onBtn = document.getElementById("onBtn");
+      let $offBtn = document.getElementById("offBtn");
+
+      $onBtn.addEventListener("click", changePic1)// 클릭하면 함수 실행
+      $offBtn.addEventListener("click", changePic2)// 클릭하면 함수 실행
+
+      function changePic1(){
+        $myImage.src = "../20240216/images/전구2.png"
+      }
+      function changePic2(){
+        $myImage.src = "../20240216/images/전구1.png"
+      }
+    </script>
+
+</body>
+</html>
