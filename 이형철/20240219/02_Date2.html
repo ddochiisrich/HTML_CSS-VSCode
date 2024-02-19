@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+
+      text-align: center;
+    }
+    span{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>공부한 기간</h1>
+    <p><span class="accent1" id="result1"></span>일이 되었습니다.</p>
+    <p><span class="accent2" id="result2"></span>시간이 되었습니다</p>
+    <p><span class="accent3" id="result3"></span>분이 되었습니다</p>
+    <p>🎉 축하합니다! 🎉</p>
+  </div>
+
+  <script>
+    // 1970년 1월 1일후 시점이 저장된 객체가 반환
+    // getTime() 메소드는 특정한 날까지의 시간을 밀리초(1/1000초)단위로 표시한다. 
+
+    let now = new Date("2024-02-19"); // 오늘 날짜
+    let firstDay = new Date("2024-01-25"); // 시작한 날짜
+
+    let toNow = now.getTime(); // 오늘까지 지난 시간 (밀리 초)
+    let toFirst = firstDay.getTime(); // 첫날까지 지난 시간 (밀리 초)
+
+    let passedTime1 = toNow - toFirst; // 첫날부터 - 오늘까지 지난 시간 (밀리 초)
+    passedTime1 = Math.round(passedTime1/(1000*60*60*24));
+
+    let passedTime2 = toNow - toFirst;
+    passedTime2 = Math.round(passedTime2/(1000*60*60));
+
+    let passedTime3 = toNow - toFirst;
+    passedTime3 = Math.round(passedTime3/(1000*60));
+
+    // 1초 1분 1시간 24시간 // 1일 = 24시간 * 60분 * 60초 * 1000밀리초
+    // 밀리초를 일수로 계산하고 반올림
+    document.querySelector("#result1").innerText = passedTime1
+    document.querySelector("#result2").innerText = passedTime2
+    document.querySelector("#result3").innerText = passedTime3
+  </script>
+</body>
+</html>

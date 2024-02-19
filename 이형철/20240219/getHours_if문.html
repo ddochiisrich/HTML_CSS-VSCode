@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getHours</title>
+
+<style>
+  div{
+    width: 400px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    text-align: center;
+  }
+  span{
+    color: red;
+  }
+  #images{
+    width: 300px;
+    border-radius: 5px;
+  }
+</style>
+
+</head>
+<body>
+  <div>
+    <h1>현재시간은 <span id="result1"></span>시 <span id="result2"></span>분 입니다.</h1>
+    <img src="#" id="images">
+  </div>
+  <script>
+    let now = new Date();
+    let toNow = now.getHours();
+    let toMin = now.getMinutes();
+    let pic = document.querySelector("#images");
+
+    document.querySelector("#result1").innerText = toNow;
+    document.querySelector("#result2").innerText = toMin;
+
+    if(toNow <= "12"){
+      (pic.src = "./images/sunset.jpg")
+    } else{
+      (pic.src = "./images/moon.jpg")
+    }
+  </script>
+</body>
+</html>
