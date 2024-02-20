@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>데이 / 다크</title>
+    <style>
+      body{
+        border: 3px dotted black;
+        text-align: center;
+        padding: 30px 0px;
+      }
+
+      .checked {
+        background-color: gray;
+        color: white;
+        border: 3px dotted white;
+      }
+      img{
+        width: 200px;
+        margin: 50px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <button id="changeBtn">데이 / 다크</button>
+      <div>
+        <img src="./images/coffee_beans.png">
+        <pre>
+커피(coffee)는 아프리카 원산의 열대 상록수인 
+커피나무의 씨앗(원두)를 볶고 갈아서 추출한 음료의 일종이다.
+
+커피나무 열매(커피 체리, coffee cherry)의 씨앗인 
+'커피 콩(커피 빈, coffee bean)'을 볶은 뒤(로스팅, roasting) 
+갈아서 물에 우려 만들며, 고유명사로서 열매와 씨앗, 껍질을 벗기고 말린 생두,
+생두를 볶은 원두, 원두를 분쇄한 가루,
+가루에서 추출한 음료까지 모두 '커피'라고 부른다.
+        </pre>
+        <p>
+          <B>상단의 버튼을 눌러보세요</B>
+        </p>
+      </div>
+    </div>
+    <script>
+      let changeBtn = document.getElementById('changeBtn');
+      let container = document.querySelector('body');
+
+      changeBtn.onclick = () => {
+        if(!container.classList.contains("checked")){
+          container.classList.add("checked");
+        }else{
+          container.classList.remove("checked");
+        }
+      }
+    </script>
+  </body>
+</html>

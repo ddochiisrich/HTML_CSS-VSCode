@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공부할 주제</title>
+</head>
+<body>
+  <div id="container">
+    <h1> 준비물 </h1>
+    <p>여행 준비물을 기록해 보세요.</p>
+    <form>
+      <input type="text" id="subject" autofocus>
+      <button onclick="newRegister(); return false;">추가하기</button>
+      <!-- return false;는 form에서 기본 기능인 submit 제출 역할을 취소함 
+      입력해주지 않으면 함수를 실행하기 전에 기본 기능을 먼저 함-->
+      <hr>
+      <ul id="itemList"></ul>
+    </form>
+  </div>
+
+  <script>
+    function newRegister(){
+      // 1. 요소(태그) 노드 추가
+      let newItem = document.createElement("li");
+      // 2. 폼에서 입력받은 텍스트 필드
+      let $subject = document.querySelector("#subject");
+      // 2. 텍스트 필드의 값을 텍스트 노드로 만들기
+      let newText = document.createTextNode($subject.value)
+      // 3. 텍스트 노드를 요소 노드의 자식 노드로 추가(연결)
+      newItem.appendChild(newText);
+      // 4. 웹 문서에서 부모 노드 가져오기(ul)
+      let $itemList = document.querySelector("#itemList")
+      // 4. 새로 만든 요소 노드를 부모 노드에 추가(연결 ul - li)
+      // $itemList.appendChild(newItem);
+      // 새로 입력된 내용이 첫번째 줄에 나오게
+      $itemList.insertBefore(newItem, $itemList.childNodes[0]);
+      // 폼의 텍스트 필드 값 지워지게 만들기
+      $subject.value = "";
+
+      // 👩🏼 삭제 부분 시작
+      // 입력된 모든 항목 가져오기 // 부모 노드에서 삭제
+      let items = document.querySelectorAll("li");
+      
+        // for(let i = 0; i < items.length; i++){
+        //   items[i].addEventListener("click", function(){
+        //     if(this.parentNode){ // 부모 노드가 있다면
+        //       this.parentNode.removeChild(this); // 부모 노드에서 삭제
+        //     }
+        //   })
+        // }
+
+      // newItem.addEventListener("click", function(){
+      //   if(this.parentNode){ // 부모 노드가 있다면
+      //     this.parentNode.removeChild(this); // 부모 노드에서 삭제
+      //   }
+      // })
+
+      newItem.addEventListener("click", function(){
+        if(this.parentNode){ // 부모 노드가 있다면
+          this.style.fontSize = "20px";
+          this.style.backgroundColor = "gray";
+          this.style.color = "white";
+          this.style.textDecoration = "line-through"
+        }
+      })
+    }
+  </script>
+</body>
+</html>

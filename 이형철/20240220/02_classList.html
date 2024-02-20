@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> classList </title>
+
+  <style>
+    img{
+      width: 200px;
+    }
+    .clicked{
+      background-color: yellowgreen;
+    }
+    .spans{
+      display: none;
+    }
+    .user{
+      cursor: pointer;
+    }
+    .checked{
+      display: inline;
+    }
+  </style>
+
+</head>
+<body>
+  <h1 id="title">My Profile</h1>
+  <div>
+    <img src="../20240126/images/모코코1.jpg" alt="모코코" id="images">
+    <div id="desc">
+      <p class="user" id="user1">이름 : <span class="spans" id="spans1">모코코</span></p>
+      <p class="user" id="user2">연락처 : <span class="spans" id="spans2">010-1234-5678</span></p>
+      <p class="user" id="user3">블로그 : <span class="spans" id="spans3">blog.naver.com</span></p>
+    </div>
+  </div>
+
+  <script>
+    // title을 가져와서 add추가 classList 추가해보기
+    const title = document.querySelector("#title");
+    // p 눌렀을 때 다른 글자 출력
+    // img 눌렀을 때 다른 이미지 나오게 img.src = "/..이미지경로"
+
+    title.onclick = () => (title.innerText = "나의 프로필"); // 화살표함수, 익명함수
+    // title.onclick = () => {
+    //   title.classList.add("clicked");
+    // }
+
+    // title.onclick = () => {
+    //   if(!title.classList.contains("clicked")){
+    //     title.classList.add("clicked");
+    //   } else{
+    //     title.classList.remove("clicked");
+    //   }
+    // }
+    
+    /////////////////////////////////////////////// 이름
+    const subject1 = document.querySelector("#user1");
+    const memo1 = document.querySelector("#spans1");
+
+    subject1.onclick = () => {
+      if(!memo1.classList.contains("checked")){
+        memo1.classList.add("checked");
+      } else{
+        memo1.classList.remove("checked");
+      }
+    }
+    /////////////////////////////////////////////// 연락처
+    const subject2 = document.querySelector("#user2");
+    const memo2 = document.querySelector("#spans2");
+
+    subject2.onclick = () => {
+      if(!memo2.classList.contains("checked")){
+        memo2.classList.add("checked");
+      } else{
+        memo2.classList.remove("checked");
+      }
+    }
+    /////////////////////////////////////////////// 블로그
+    const subject3 = document.querySelector("#user3");
+    const memo3 = document.querySelector("#spans3");
+
+    subject3.onclick = () => {
+      if(!memo3.classList.contains("checked")){
+        memo3.classList.add("checked");
+      } else{
+        memo3.classList.remove("checked");
+      }
+    }
+    
+    // 👩🏼 1️⃣ 콘솔창에 입력해보기.
+    // document.querySelector("#desc p").classList
+
+    // 👩🏼 2️⃣ classList는 요소에 적용한 클래스 스타일을 모두 모아놓은 프로퍼티.
+    // [기본형]
+    // 요소.classList.add(클래스명)
+    // 요소.classList.remove(클래스명)
+
+    // 👩🏼 3️⃣ contains()함수는 특정 클래스가 있는지 확인할 때 유용
+    // [기본형]
+    // 요소.classList.contains(클래스명)
+
+    // 👩🏼 4️⃣ 이후 토글로 만들기 (다크/데이 모드)
+    // [기본형]
+    // 요소.classList.toggle(클래스명)
+
+
+
+
+    const images = document.querySelector('#images');
+
+    images.onclick = () => (images.src = "../20240126/images/모코코2.jpg");
+    
+    // images.onclick = () => {
+    //   if(images.src = ("../20240126/images/모코코1.jpg")){
+    //    images.src = ("../20240126/images/모코코2.jpg")
+    //   }
+    // }
+  </script>
+</body>
+</html>

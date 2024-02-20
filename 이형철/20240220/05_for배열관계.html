@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> for 배열관계 </title>
+</head>
+<body>
+  
+  <script>
+    // 🎃 for문
+    const students = ["이형철 ", "공준호 ", "우황희 <br><br>"];
+
+    for (let i = 0 ; i < students.length ; i++ ){
+      document.write(`${students[i]}`);
+    }
+
+    // 🎃 forEach문
+    const students2 = ["양은주 ", "이현학 ", "고원 <br><br>"];
+
+    students2.forEach(function(student){
+      document.write(`${student}, `)
+    });
+
+    // 🎃 for of문
+    const students3 = ["김희선 ", "박효열 ", "김동욱 "];
+
+    for (student of students3) {
+      document.write(`<br> ${student} <br>`);
+    }
+
+    // 🎃 for in문
+    // 객체의 값을 가져와서 처리한다.
+    const comBook = {
+      title : "코딩만 따라해도",
+      pubDate : "2022-02-08",
+      pages : 438,
+      writer : "반병헌"
+    }
+
+    for(key in comBook){
+      document.write(`<br> ${key} : ${comBook[key]}<br>`);
+    }
+
+  </script>
+</body>
+</html>
