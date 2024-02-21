@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container{text-align: center;}
+    #big{ width: 400px; height: 300px;}
+    .small {width: 150px; height: 120px; border: 1px solid rgb(236, 236, 236); border-radius: 5px;}
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>나는야 모코코</h1>
+    <div id="prod-pic">
+      <img src="./images/모코코1.png" id="big">
+      <div id="small-pic">
+        <img src="./images/모코코1.png" class="small">
+        <img src="./images/모코코2.jpg" class="small">
+        <img src="./images/모코코3.png" class="small">
+        <img src="./images/모코코4.jpg" class="small">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let big = document.querySelector("#big");
+    let smallPics = document.querySelectorAll(".small")
+
+    for(let i = 0 ; i < smallPics.length ; i++){
+      smallPics[i].addEventListener("click", changePic);
+
+    }
+
+    function changePic(){
+      // this 예약어를 사용해서 클릭한 대상 (small)의 속성값 가져오기
+      let newPic = this.src;
+      big.setAttribute("src", newPic);
+    }
+  </script>
+</body>
+</html>

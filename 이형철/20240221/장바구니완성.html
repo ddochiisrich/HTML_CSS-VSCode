@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        height: 1000px;
+      }
+      img{
+        width: 192px;
+      }
+      #contents{
+        display: flex;
+      }
+      #container1 {
+        margin: auto;
+        text-align: center;
+      }
+      #container2 {
+        margin: 0px 50px auto;
+        text-align: center;
+        
+      }
+      #container3 {
+        margin: auto;
+        text-align: center;
+      }
+      button {
+        border: none;
+        padding: 5px 10px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+      button:hover {
+        box-shadow: 0 5px 28px rgba(0, 0, 0, 0.25),
+          0 5px 5px rgba(0, 0, 0, 0.22);
+      }
+      #shoppingList {
+        padding: 5px;
+        font-size: 20px;
+        margin-top: 40px;
+        border: 1px solid rgb(214, 214, 214);
+        border-radius: 5px;
+        text-align: center;
+      }
+      #shoppingList > hr {
+        width: 230px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 상품 내용이 나올 공간 -->
+    <div id="contents">
+
+      <div id="container1">
+        <h3>iPhone</h3>
+        <img
+          src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-compare-iphone-15-pro-202309?wid=192&hei=256&fmt=jpeg&qlt=95&.v=1692827834790"
+        />
+        <h2>iPhone15 Pro</h2>
+        <h3>궁극의 IPhone.</h3>
+        <p>₩1,550,000 부터</p>
+        <hr />
+        <p>17.0cm 또는 15.5cm</p>
+        <pre>
+Super Retina XDR 디스플레이
+ProMotion기술
+상시표시형 디스플레이
+      </pre
+        >
+        <p>iPhone 15 Pro</p>
+        <button id="addItem1"> 장바구니에 추가하기 </button>
+      </div>
+
+      <div id="container2">
+        <h3>iPhone</h3>
+        <img
+        src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-compare-iphone-15-202309?wid=384&hei=512&fmt=jpeg&qlt=90&.v=1692827832423"
+      />
+        <h2>iPhone15</h2>
+        <h3>막강한 성능.</h3>
+        <p>₩1,250,000 부터</p>
+        <hr />
+        <p>17.0cm 또는 15.5cm</p>
+        <pre>
+Super Retina XDR 디스플레이
+—
+—
+      </pre
+        >
+        <p>iPhone15</p>
+        <button id="addItem2"> 장바구니에 추가하기 </button>
+      </div>
+
+      <div id="container3">
+        <h3>iPhone</h3>
+        <img
+        src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-compare-iphone-14-202309?wid=384&hei=512&fmt=jpeg&qlt=90&.v=1693516153040"
+      />
+        <h2>iPhone14</h2>
+        <h3>여전히 놀라움.</h3>
+        <p>₩1,090,000 부터</p>
+        <hr />
+        <p>17.0cm 또는 15.4cm</p>
+        <pre>
+Super Retina XDR 디스플레이
+—
+—
+      </pre
+        >
+        <p>iPhone14</p>
+        <button id="addItem3"> 장바구니에 추가하기 </button>
+      </div>
+
+    </div>
+    <!-- 장바구니 영역 -->
+    <div id="shoppingList">
+      장바구니
+      <hr />
+    </div>
+
+<!-- JavaScript 부분 -->
+<script>
+  const shoppingList = document.querySelector("#shoppingList");
+
+  // h2 및 button 모두 이벤트 처리
+  const items = document.querySelectorAll("#contents h2, #contents button");
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      let newP = document.createElement("p");
+
+      if (item.tagName === "H2") {
+        // h2 태그를 클릭한 경우
+        textNode = document.createTextNode(item.innerText);
+      } else if (item.tagName === "BUTTON") {
+        // button을 클릭한 경우
+        textNode = document.createTextNode(item.previousElementSibling.innerText);
+      }
+
+      newP.appendChild(textNode);
+      shoppingList.appendChild(newP);
+
+      newP.style.fontSize = "20px";
+      newP.style.color = "black";
+      
+    });
+  });
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니</title>
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        height: 1000px;
+      }
+      #container{
+        margin: auto;
+        text-align: center;
+      }
+      #addItem{
+        border: none;
+        padding: 5px 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 1s cubic-bezier(.25,.8,.25,1);
+      }
+      #addItem:hover{
+        box-shadow: 0 5px 28px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+      }
+      #shoppingList{
+        padding: 5px;
+        font-size: 20px;
+        margin-top: 40px;
+        border: 1px solid rgb(214, 214, 214);
+        border-radius: 5px;
+        text-align: center;
+      }
+      #shoppingList > hr{
+        width: 230px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 상품 내용이 나올 공간 -->
+    <div id="container">
+      <h3>iPhone</h3>
+      <h2>iPhone15 Pro</h2>
+      <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-compare-iphone-15-pro-202309?wid=192&hei=256&fmt=jpeg&qlt=95&.v=1692827834790" alt="">
+      <h3>궁극의 iPhone.</h3>
+      <p>₩1,550,000 부터</p>
+      <hr>
+      <p>17.0cm 또는 15.5cm</p>
+      <pre>
+Super Retina XDR 디스플레이
+ProMotion기술
+상시표시형 디스플레이
+      </pre>
+      
+      <button id="addItem"> 장바구니에 추가하기 </button>
+    </div>
+    <!-- 장바구니 영역 -->
+    <div id="shoppingList">장바구니<hr></div>
+
+    <script>
+      const addItemButton = document.querySelector("#addItem"); // 장바구니 추가 버튼
+      const shoppingList = document.querySelector("#shoppingList"); // 장바구니 영역
+      const title = document.querySelector("#container > h2"); // 책 제목 부분
+
+      addItemButton.addEventListener("click", () => {
+        let newP = document.createElement("p"); // 새로운 p 요소 노드 만들기
+        let textNode = document.createTextNode(title.innerText); // 텍스트 노드 만들기
+        newP.appendChild(textNode); // 텍스트 노드를 p요소 노드에 추가.
+        shoppingList.appendChild(newP); // p요소를 장바구니에 추가.
+
+        // 꾸미기
+        newP.style.fontSize = "15px"
+        newP.style.color = "black"
+      },{once:true}); // 한번만 눌러지게 (이벤트 리스너를 한 번만 실행)
+    </script>
+  </body>
+</html>
