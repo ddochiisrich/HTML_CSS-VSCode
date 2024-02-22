@@ -7,12 +7,14 @@
     <style>
       *{
         box-sizing: border-box;
-        text-align: center;
+        padding: 0;
+        margin: 0;
       }
       .carousel_wrap{
         width: 640px;
         height: 380px;
         overflow: hidden;
+        position: relative;
       }
       .carousel{
         display: flex;
@@ -21,6 +23,25 @@
       .carousel_wrap > img{
         width: 640px;
         height: 360px;
+      }
+      .carousel_button{
+        position: relative;
+        top: -205px;
+        display: flex;
+        justify-content: space-between;
+        width: 640px;
+        z-index: 0;
+      }
+      .prev, .next{
+        background: rgba(0, 0, 0, 0.143);
+        color: white;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        outline: none;
+        border: none;
+        text-shadow: 1px solid
+         black;
       }
     </style>
   </head>
@@ -33,11 +54,19 @@
           <img src="./images/jdm4.jpg" />
           <img src="./images/jdm5.jpg" />
         </div>
-        <button type="button" class="prev">prev</button>
-        <button type="button" class="next">next</button>
+        <div class="carousel_button">
+        <button type="button" class="prev"><</button>
+        <button type="button" class="next">></button>
+        </div>
+
+        <div class="carousel_bottom_circles">
+          <div class="carousel_circle"></div>
+          <div class="carousel_circle"></div>
+          <div class="carousel_circle"></div>
+          <div class="carousel_circle"></div>
+          <div class="carousel_circle"></div>
+        </div>
       </div>
-      <!-- <button type="button" class="prev">prev</button>
-      <button type="button" class="next">next</button> -->
 
     <script>
       const prevButton = document.querySelector('.prev');
