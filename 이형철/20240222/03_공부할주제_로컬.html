@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공부할 주제_로컬 스토리지</title>
+    <style>
+      #container{
+        text-align: center;
+      }
+      form{
+        padding : 30px;
+        background-color: rgb(242, 242, 242);
+        text-align: center;
+        align-items: center;
+      }
+      .addBtn{
+        border: none;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 1s cubic-bezier(.25,.8,.25,1);
+        padding: 7px;
+      }
+      #item{
+        outline: none;
+        height: 25px;
+        font-size: 15px;
+        border-radius: 5px;
+        border: 1px solid lightgray;
+      }
+      ul{
+        padding: 0px;
+      }
+      li{
+        list-style: none;
+        padding-left: 0px;
+        margin: 0px;
+
+      }
+      span{
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>📚 Todo List 📚</h1>
+      <p>오늘 할 일을 기록해보세요!</p>
+      <form>
+        <input type="text" id="item" autofocus="true" />
+        <button type="button" id="add" class="addBtn">추가하기</button>
+      </form>
+      <!-- 결과 표시할 영역 -->
+      <div id="itemList"></div>
+    </div>
+
+    <script>
+      let itemList = [];
+      let addBtn = document.querySelector("#add");
+      let inputField = document.querySelector("#item");
+      addBtn.addEventListener("click", addList) // 클릭하면 addList 함수 실행
+      // addBtn.onclick = addList; 라고 해도 된다. 
+      // (onclock 1회), addEventListener는 여러번 가능
+
+      // 엔터키 누르면 내용 추가되게 하기 상단에 변수 let inputField = document.querySelector("#item"); 추가 필요함
+      inputField.addEventListener("keypress", function(event){
+        if (event.key === "Enter") {
+          event.preventDefault(); // 새로고침 방지
+          addList();
+        }
+      })
+
+
+      function addList(){
+        let item = document.querySelector("#item").value; // 텍스트 필드 내용 가져오기
+        console.log(item); // 추가내용 콘솔창 확인
+        if(item != null){
+          // itemList.push(item); // itemList 배열의 끝에 item 변수 값 추가
+          itemList.unshift(item);
+          document.querySelector("#item").value = "";
+          document.querySelector("#item").focus();
+        }
+
+        localStorage.setItem("storageList", JSON.stringify(itemList));
+        showList();
+
+      }
+      function showList(){
+        let list = "<ul>"; // 목록 시작하는 <ul>태그 저장
+          for(let i = 0 ; i < itemList.length ; i ++){ // 배열 요소마다 반복
+            list += "<li>" + "✏️ㅤ" + itemList[i] + "<span class='close' id=" +i+ ">ㅤ❎ </span></li>";
+            // 요소와 삭제 버튼을 <li> ~ </li>로 묶음
+          }
+          list +="<ul>" // list = list + "</ul>" 목록을 끝내는 부분
+          document.querySelector("#itemList").innerHTML = list; // list내용표시
+
+          let remove = document.querySelectorAll(".close"); // 삭제버튼
+          for( let i = 0 ; i < remove.length ; i++){
+            remove[i].addEventListener("click", removeList); // 해당요소 클릭시 removeList 실행
+          }
+      }
+
+      function removeList(){
+        console.log(this); // 클릭한 id=i번째 확인
+        let id = this.getAttribute("id"); // 클릭 id값 가져와서 id 변수에 저장
+        itemList.splice(id, 1) // itemList 배열에서 인덱스 값이 id인 요소 1개 삭제
+        showList(); // 변경된 부분 화면에 표시
+        localStorage.setItem("storageList", JSON.stringify(itemList));
+
+      }
+
+      // 🛑 로컬스토리지 테스트
+      // localStorage.setItem(1, "첫 번째 값")
+      // localStorage.getItem(1) // 키 이름으로 가지고 온다.
+      // localStorage.clear()
+
+      // 🛑 배열 형태로 저장
+      // let array = [1, 2, 3]
+      // localStorage.setItem('name', JSON.stringify(array));
+      // // 로컬 스토리지에서 가지고 오기
+      // let todo = localStorage.getItem('name');
+      // JSON.parse(todo);
+
+      // 여러 값으로 된 문자열을 가져와 배열 형태로 변환할 때는
+      // 🛑 JSON.parse() 메소드를 사용
+      // JSON(JavaScript Object Notation)은 자료를 주고받는 방식을 가리키는 말로
+      // '제이슨' 이라고 읽는다
+      // 자바스크립트 객체를 정의하는 것과 같은 방법을 사용
+    </script>
+  </body>
+</html>

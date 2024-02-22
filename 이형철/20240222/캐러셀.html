@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>캐러셀</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .carousel_wrap{
+        width: 640px;
+        height: 380px;
+        overflow: hidden;
+      }
+      .carousel{
+        display: flex;
+        transition: 0.5s ease-in-out;
+      }
+      .carousel_wrap > img{
+        width: 640px;
+        height: 360px;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="carousel_wrap">
+        <div class="carousel">
+          <img src="./images/jdm1.jpg" />
+          <img src="./images/jdm2.jpg" />
+          <img src="./images/jdm3.jpg" />
+          <img src="./images/jdm4.jpg" />
+          <img src="./images/jdm5.jpg" />
+        </div>
+        <button type="button" class="prev">prev</button>
+        <button type="button" class="next">next</button>
+      </div>
+      <!-- <button type="button" class="prev">prev</button>
+      <button type="button" class="next">next</button> -->
+
+    <script>
+      const prevButton = document.querySelector('.prev');
+      const nextButton = document.querySelector('.next');
+      const carousel = document.querySelector('.carousel');
+
+      let index = 0;
+
+      prevButton.addEventListener('click', () => {
+        if (index === 0 ) return;
+        index -= 1;
+
+        carousel.style.transform = `translate3d(-${640 * index}px, 0, 0)`;
+      })
+
+      nextButton.addEventListener('click', () => {
+        if (index === 4) return;
+        index += 1;
+
+        carousel.style.transform = `translate3d(-${640 * index}px, 0, 0)`;
+
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>총 주문가격</title>
+  <style>
+    body{
+      background-color: rgb(242, 242, 242);
+    }
+    h1{
+      text-align: center;
+    }
+    img{
+      width: 410px;
+      max-width: 410px;
+    }
+    .originalPrice{
+      text-align: center;
+    }
+    .small{
+      width: 50px;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+    }
+    #total{
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>💻 자신만의 MacBook Pro 14 구성하기 💻</h1>
+  <form>
+    <fieldset class="originalPrice">
+      <legend> <b>기본 가격</b> </legend>
+      <h2>  2,390,000원 </h2>
+      <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-gallery1-202310?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=1697311136703" id="big">
+      <div id="smallPic">
+        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-gallery1-202310?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=1697311136703" class="small">
+        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-gallery2-202310_GEO_KR?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=1698258954753" class="small">
+        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-gallery3-202310?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=1697311139464" class="small">
+        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-gallery4-202310?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=1697311142455" class="small">
+        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-gallery5-202310?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=1697311142339" class="small">
+        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-gallery6-202310?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=1697311154171" class="small">
+        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-gallery7-202310?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=1698259122707" class="small">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>추가 주문</legend>
+      <!-- 체크박스 value에 각각의 가격 값을 입력한다. -->
+      <!-- 모든 체크박스 클래스 이름 같게. checkbx -->
+        <label><input type="checkbox" class="checkbx" value="270000" name="memory">16GB 통합 메모리 (270,000원)</label><br>
+        <label><input type="checkbox" class="checkbx" value="540000" name="memory">24GB 통합 메모리 (540,000원)</label><br><hr>
+        <label><input type="checkbox" class="checkbx" value="270000" name="ssd">1TB SSD 저장 장치 (270,000원)</label><br>
+        <label><input type="checkbox" class="checkbx" value="810000" name="ssd">2TB SSD 저장 장치 (810,000원)</label><br><hr>
+        <label><input type="checkbox" class="checkbx" value="17000" name="adapter">96W USB-C 전원 어댑터 (17,000원)</label><br><hr>
+        <label><input type="checkbox" class="checkbx" value="449000">Final Cut Pro (449,000원)</label><br><hr>
+        <label><input type="checkbox" class="checkbx" value="299000">Logic Pro (229,000원)</label>
+    </fieldset>
+      <!-- 결과 합계가격을 나타낼 곳 ⬇️ -->
+    <fieldset>
+      <legend>합계</legend>
+      <label><input type="text" id="total"></label>
+    </fieldset>
+  </form>
+
+  <script>
+    let big = document.querySelector("#big")
+    let smallPics = document.querySelectorAll(".small")
+
+    for(i=0 ; i < smallPics.length ; i++){
+      smallPics[i].addEventListener("click", changePic);
+    }
+
+    function changePic(){
+      let newPic = this.src;
+      big.setAttribute("src", newPic);
+    }
+
+    let price = 2390000;
+    // 모든 체크박스 (같은 이름의 클래스)를 변수로 가져오기 qsAll
+    let sideMenu = document.querySelectorAll(".checkbx")
+    // total 합계 가격 부분 변수로 가져오기.
+    total.value = price + "원";
+
+    for(i=0; i<sideMenu.length; i++){
+      sideMenu[i].onclick = function(){
+        if(this.checked == true){
+          // 합계가격에 합산하기 +=
+          price += parseInt(this.value); // parseInt 정수로 변환하기위해 사용
+        } else {
+          // 체크 해제시 차감하기 -=
+          price -= parseInt(this.value);
+        }
+        total.value = price + "원";
+      }
+    }
+
+  </script>
+</body>
+</html>

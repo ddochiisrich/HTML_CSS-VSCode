@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>📝 회원가입</h1>
+      <form action="#" id="register">
+        <ul id="user-info">
+          <li>
+            <label for="user-id">아이디</label>
+            <input
+              type="text"
+              id="user-id"
+              placeholder="4~15자리의 영문과 숫자로 입력"
+              required
+            />
+            <!-- required : 필수입력 -->
+          </li>
+          <li>
+            <label for="email">이메일</label>
+            <input type="email" id="email" required />
+          </li>
+          <li>
+            <label for="user-pw1">비밀번호</label>
+            <input
+              type="password"
+              id="user-pw1"
+              placeholder="8자리 이상"
+              required
+            />
+          </li>
+          <li>
+            <label for="user-pw2">비밀번호 확인</label>
+            <input type="password" id="user-pw2" required />
+          </li>
+          <li>
+            <label>메일링 수신</label>
+            <input type="radio" value="yes" name="mailing" />예
+            <!-- radio 중복선택 안되게 할때는 name을 맞춰준다. -->
+            <input type="radio" value="no" name="mailing" />아니오
+          </li>
+        </ul>
+
+        <ul id="buttons">
+          <li>
+            <button type="submit">가입하기</button>
+          </li>
+          <li>
+            <button type="reset">취소</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+
+    <script>
+      // 아이디 필드를 가져와서 변수에 저장
+      let userId = document.querySelector("#user-id");
+      // 비밀번호 필드를 가져와서 변수에 저장
+      let pw1 = document.querySelector("#user-pw1");
+      // 비밀번호 확인 필드를 가져와서 변수에 저장
+      let pw2 = document.querySelector("#user-pw2");
+
+      userId.onchange = checkId; // 아이디 자리수 확인위해 작성
+      pw1.onchange = checkPw; // 비밀번호 자리수 확인위해 작성
+      pw2.onchange = comparePw // 비밀번호확인 자리수 확인위해 작성
+
+      // 아이디 if 사용해서 4~15자리
+      function checkId() {
+        if (userId.value.length < 4 || userId.value.length > 15) {
+          alert("아이디를 4~15자리의 영문과 숫자를 사용하세요."); // 오류 메세지 출력
+          userId.select(); // 다시 입력할 수 있도록 userId필드 선택해 놓음.
+          userId.value = ""; // 아이디 필드를 지워줌
+        }
+      }
+
+      // 비밀번호 자리수 8자리 이상인지 // 오류메세지 출력
+      function checkPw() {
+        if (pw1.value.length < 8) {
+          alert("비밀번호를 8자리 이상 입력해주세요.");
+          pw1.focus(); // 포커싱
+          pw1.value = ""; // 비밀번호 필드를 지워줌
+        }
+      }
+      // 비밀번호 비교
+      function comparePw(){
+        if(pw1.value != pw2.value){ // != : pw1과 pw2가 다른지 확인하는 연산자
+          alert("비밀번호가 다릅니다. 다시 입력하세요.");
+          pw2.focus();
+          pw2.value = "";
+        }
+      }
+    </script>
+  </body>
+</html>
