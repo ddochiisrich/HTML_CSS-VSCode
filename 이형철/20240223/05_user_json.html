@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>user_json</title>
+  <style>
+    body{
+      background-color: olive;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="result">
+    <!-- <div class="quote"></div>
+    <div class="author"></div> -->
+  </div>
+
+  <script>
+    fetch("https://dummyjson.com/quotes")
+      .then(response => response.json())
+      .then(data => {
+        // 한 번에 가져오는 데이터 갯수 확인하기
+        let output = '';
+        let result = document.querySelector('#result');
+        let quotes = (data.quotes);
+
+        quotes.forEach(quote => {
+          output += `
+          <h2> 👨🏼 ${quote.author} </h2>
+          <p> ${quote.quote} </p>
+          <hr>
+          `;
+        })
+        result.innerHTML = output; // 화면출력
+        console.log(quotes); // 콘솔창 출력
+        
+      })
+      .catch(error => console.log(error)); // 에러확인
+  </script>
+</body>
+</html>

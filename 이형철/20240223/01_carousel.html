@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>캐러셀</title>
+    <style>
+      h3{
+        text-align: center;
+      }
+      #container {
+        width: 640px;
+        height: 360px;
+        border: 2px solid seagreen;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .arrow{
+        z-index: 100;
+        font-size: 2em;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #bbb;
+        cursor: pointer;
+        width: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>다른 이미지를 보려면 좌우 화살표를 눌러보세요.</h3>
+    <div id="container">
+      <!-- 유니코드 엔티티코드 -->
+      <div class="arrow" id="left">&lang;</div>
+      <div class="arrow" id="right">&rang;</div>
+    </div>
+
+    <script>
+      const container = document.querySelector("#container"); // 사진 영역
+      const pics = [
+        `porsche1.jpg`,
+        `porsche2.jpg`,
+        `porsche3.jpg`,
+        `porsche4.jpg`,
+        `porsche5.jpg`,
+      ];
+
+      container.style.backgroundImage = `url(images/${pics[0]})`; // 첫번째 이미지 보이게
+      const arrows = document.querySelectorAll(".arrow"); // 화살표 모두 가져오기
+
+      let i = 0; // 배열 인덱스
+      arrows.forEach(arrow => {
+        arrow.addEventListener("click", (e) => {
+          if(e.target.id === "left"){ // 왼쪽인지 확인 🧑‍🎄
+            i--; // 이전 이미지로 이동
+            if (i < 0){ // 첫번째 이미지인지 확인! (-1이면)
+              i = pics.length - 1; // 맨 마지막 이미지로 이동 (4번 배열로 이동)
+            }
+          } else if (e.target.id === "right") { // 오른쪽 인지 확인 🧑‍🎄
+            i++; // 다음 이미지로 이동
+            if (i === pics.length){ // 마지막 이미지 라면?
+              i = 0 // 첫번째 이미지로 이동
+            }
+          }
+          container.style.backgroundImage = `url(images/${pics[i]})`; // 현재 이미지 보이게
+        })
+      })
+    </script>
+  </body>
+</html>

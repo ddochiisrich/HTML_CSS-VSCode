@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>user_json</title>
+  
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400..700&family=Kalam:wght@300;400;700&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+    body{
+      background-color: olive;
+      color: white;    
+    }
+    .author{
+      text-align: end;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .quote{
+      text-align: center;
+      font-family: "Allura";
+      font-weight: 400;
+      font-style: normal;
+      font-size: 30px;
+    }
+    #result{
+      width: 400px;
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="result">
+    <div class="quote"></div>
+    <div class="author"></div>
+  </div>
+
+  <script>
+    fetch("https://dummyjson.com/quotes")
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        // 데이터 구조파악 한 번에 가져오는 데이터 🛑갯수 확인하기
+        const result = document.querySelector("#result");
+        // 🛑 랜덤으로 가져오기
+        const random = Math.floor(Math.random() * json.quotes.length); // 0 ~29 사이의 수
+        result.querySelector(".quote").innerHTML = `<h2>${json.quotes[random].quote}</h2>`;
+        result.querySelector(".author").innerHTML = `<p> ✒️ ${json.quotes[random].author}</p>`;
+        
+      })
+      .catch(error => console.log(error)); // 에러확인
+  </script>
+</body>
+</html>

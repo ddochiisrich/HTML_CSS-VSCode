@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUDENT</title>
+</head>
+<body>
+  <div id="result"></div>
+
+  <script>
+    // JSON을 가지고 오는 방법
+    
+    // 1. XMLHttpRequest
+    // XMLHttpRequest객체는 자바스크립트 초기 버전부터 지금까지 사용
+    // 발전하면서 fetch API 등장
+    let xhr = new XMLHttpRequest(); // 서버와 연결하기 위한 객체 생성
+    xhr.open("GET", "student.json") // 서버와 연결
+    xhr.send();
+
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState == 4 && xhr.status == 200){ // 가져오면
+        let student = JSON.parse(xhr.responseText); // JSON객체로 변환
+        // 화면에 표시
+        document.getElementById("result").innerHTML = `
+        <h1>${student.name}</h1>
+        <ul><li>전공 : ${student.major}</li>
+          <li>학년 : ${student.grade}</li></ul>
+        `;
+      }
+    }
+
+    // 콘솔에 🛑 xhr 입력해보기
+    // 0 아무것도 요청하지 않은 상태
+    // 1 서버로 자료 요청하고 성공상태
+    // 2 서버요청에 대한 응답으로 헤더 도착한 상태
+    // 3 서버에서 자료가 로딩 중인 상태
+    // 4 사용할 수 있는 상태
+  </script>
+</body>
+</html>

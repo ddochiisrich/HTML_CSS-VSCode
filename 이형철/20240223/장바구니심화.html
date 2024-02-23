@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>장바구니</title>
+  <style>
+  img{
+    width: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #quantity{
+    width: 50px;
+  }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="cart_main">
+      <img src="https://www.dibidibi.com/Data/GP/fn96bc7eem/DETAIL/6069a654-457f-4e44-a726-070d268a464b.jpg">
+      <h2>자동차 키링</h2>
+      <div id="cart_quantity">
+        <p>가격 : 20000원</p>
+        <label for="quantity">개수 : 
+          <input type="number" id="quantity" min="0" value="0">
+        </label>
+        <hr>
+      </div>
+      <div id="quantity_price">
+        <p>총 개수 : <input type="text" id="totalQuantity" value="0"> 개</p>
+        <p>합계 가격 : <input type="text" id="totalPrice" value="0"> 원</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let quantity = document.querySelector("#quantity").value
+    let price = 20000
+    let totalPrice = price * quantity;
+    let sum = document.querySelector("#totalPrice").value
+    totalPrice.innerText = sum
+  
+  </script>
+</body>
+</html>
