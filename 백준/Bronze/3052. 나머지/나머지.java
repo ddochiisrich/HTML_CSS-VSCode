@@ -6,24 +6,19 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-	
-		int sum = 0;
-		
+
 		int [] num = new int[10];
 		
 		for(int i = 0 ; i < 10 ; i++) {
-			num[i] = scan.nextInt();
+			int A = scan.nextInt();
+			int B = A%42;
+			num[i] = B;
 		}
 		
-		int [] num2 = new int[10];
 		
-		for(int i = 0 ; i < 10 ; i++) {
-			num2[i] = num[i]%42;
-		}
-		
-		IntStream result = Arrays.stream(num2).distinct();
+		IntStream result = Arrays.stream(num).distinct();
 
-		int[] num3 = result.toArray();
-		System.out.println(num3.length);
+		int[] num2 = result.toArray();
+		System.out.println(num2.length);
 	}
 }
